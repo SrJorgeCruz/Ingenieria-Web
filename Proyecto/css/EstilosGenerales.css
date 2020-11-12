@@ -1,0 +1,118 @@
+
+
+
+
+.contenedor .ArticuloRev{
+    display: none;
+
+}
+
+
+
+
+
+
+
+
+.header {
+    width: auto;
+    height: auto;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header img {
+    width: auto;
+    margin: 5px;
+  }
+  
+  .header h1 {
+    color: white;
+  }
+  
+  .titulo {
+    width: 80%;
+    text-align: center;
+    font: black;
+  }
+  
+.header h1 {
+    color: red;
+  }
+
+  .contenedor{
+      width: 90%;
+      height: auto;
+      /*border-color: black;
+      color: black;*/
+      margin: 50px auto;
+      display: flex;
+      justify-content: space-around;
+
+  }
+  .hijo{
+      background: white;
+      width: 30%;
+      height: 100px;
+      color:black;
+      margin: 30px;
+      padding: 20px;
+      font-size: 15;
+      text-align: left;
+      flex-grow: 1;
+  }
+  .hijo1{
+    background:green;
+    width: 100%;
+    height: auto;
+    color:black;
+    margin: 30px;
+    padding: 20px;
+    font-size: 15;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  
+
+/*De el de maestria*/
+
+
+  .listaPestañas {
+    list-style: none;
+  }
+  
+  .listaPestañas li {
+    display: inline;
+  }
+  
+
+  .datos{
+      font-size: 25;
+      color: black;
+      font-family: 'Times New Roman', Times, serif;
+  }
+
+  .cajitaDato{
+   
+    background:white;
+    width: auto;
+    height: auto;
+    margin: 30px;
+    padding: 20px;
+    text-align: left;
+    flex-grow: 1;
+    
+  }
+  .titulo{
+      color: black;
+      width: 100%;
+      font-size: 25;
+      font-family: 'Times New Roman', Times, serif;
+      flex-grow: 1;
+      justify-content: center;
+      display: inline;
+  }
