@@ -1,118 +1,162 @@
+.datos{
+  font-size: 25;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.cajitaDato{
+
+background:white;
+width: auto;
+height: auto;
+margin: 30px;
+padding: 20px;
+text-align: left;
+flex-grow: 1;
+
+}
 
 
+.hijo{
+  background:rgba(104,36,68,.9);
+  width: auto;
+  height: 300px;
+  color:black;
+  margin: 30px;
+  padding: 20px;
+  font-size: 15;
+  text-align: left;
+}
+
+.hijo1{
+background:white;
+width: auto;
+height: auto;
+color:black;
+margin: 30px;
+padding: 20px;
+font-size: 15;
+text-align: left;
+display: flex;
+flex-wrap: wrap;
+}
 
 
-.contenedor .ArticuloRev{
-    display: none;
+.login-page {
+  width: 90%;
+  padding: 8% 0 0;
+  margin: auto;
+}
 
+.form {
+  width: auto;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  margin: 0 auto 100px;
+  padding: 45px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input, .form select {
+  font-family: sans-serif;
+  background: #f5f5f5;
+  width: 100%;
+  border: 1px solid #f5f5f5;
+  border-radius: 7px;
+  margin-bottom: 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 0.9em;
+}
+
+/*
+.form input:valid {
+    border-color:green;
+}
+
+.form input:invalid{
+    border-color:red;
+}
+*/
+.form button {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #722f37;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.form button:hover, .form button:active, .form button:focus {
+  background: #5e2129;
+}
+
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.form .login-form {
+  display: none;
+}
+
+body {
+  background: #5e2129;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #5e2129, #1c212b);
+  background: -moz-linear-gradient(right, #5e2129, #1c212b);
+  background: -o-linear-gradient(right, #5e2129, #1c212b);
+  background: linear-gradient(to left, #5e2129, #1c212b);
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+  width: auto;
+  height: auto;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header img {
+  width: auto;
+  margin: 5px;
+}
+
+.header h1 {
+  color: white;
+}
+
+.titulo {
+  width: 80%;
+  text-align: center;
+}
+
+.titulado, .correo-skype {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 
 
 
 
-
-
-
-.header {
-    width: auto;
-    height: auto;
-    padding: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .header img {
-    width: auto;
-    margin: 5px;
-  }
-  
-  .header h1 {
-    color: white;
-  }
-  
-  .titulo {
-    width: 80%;
-    text-align: center;
-    font: black;
-  }
-  
-.header h1 {
-    color: red;
-  }
-
-  .contenedor{
-      width: 90%;
-      height: auto;
-      /*border-color: black;
-      color: black;*/
-      margin: 50px auto;
-      display: flex;
-      justify-content: space-around;
-
-  }
-  .hijo{
-      background: white;
-      width: 30%;
-      height: 100px;
-      color:black;
-      margin: 30px;
-      padding: 20px;
-      font-size: 15;
-      text-align: left;
-      flex-grow: 1;
-  }
-  .hijo1{
-    background:green;
-    width: 100%;
-    height: auto;
-    color:black;
-    margin: 30px;
-    padding: 20px;
-    font-size: 15;
-    text-align: left;
-    display: flex;
-    flex-wrap: wrap;
-    
-  }
-  
-
-/*De el de maestria*/
-
-
-  .listaPestañas {
-    list-style: none;
-  }
-  
-  .listaPestañas li {
-    display: inline;
-  }
-  
-
-  .datos{
-      font-size: 25;
-      color: black;
-      font-family: 'Times New Roman', Times, serif;
-  }
-
-  .cajitaDato{
-   
-    background:white;
-    width: auto;
-    height: auto;
-    margin: 30px;
-    padding: 20px;
-    text-align: left;
-    flex-grow: 1;
-    
-  }
-  .titulo{
-      color: black;
-      width: 100%;
-      font-size: 25;
-      font-family: 'Times New Roman', Times, serif;
-      flex-grow: 1;
-      justify-content: center;
-      display: inline;
-  }
