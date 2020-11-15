@@ -66,3 +66,37 @@ function cambiarFormDF() {
 
   }
 
+
+
+
+// Funciones navegacion  PaginaAlumno.html
+function cambiarDPersonales(){
+  let DP = document.getElementById("idPersonales");
+  let P = document.getElementById("idProductividad");
+  let MD = document.getElementById("idModificarDatos");
+
+  DP.style.display = "block";
+  P.style.display = "none";
+  MD.style.display = "none";
+}
+
+function cambiarProductividad(){
+  let DP = document.getElementById("idPersonales");
+  let P = document.getElementById("idProductividad");
+  let MD = document.getElementById("idModificarDatos");
+
+  DP.style.display = "none";
+  P.style.display = "block";
+  MD.style.display = "none";
+}
+
+function cambiarMDatos(){
+  let DP = document.getElementById("idPersonales");
+  let P = document.getElementById("idProductividad");
+  let MD = document.getElementById("idModificarDatos");
+
+  DP.style.display = "none";
+  P.style.display = "none";
+  MD.style.display = "block";
+}
+

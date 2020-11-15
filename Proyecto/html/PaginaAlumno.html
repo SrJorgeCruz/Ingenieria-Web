@@ -36,22 +36,212 @@
         
         <div class="wrap-navegacion">
             <div class="lista-navegacion">
-                <p>Consultas</p>
+                <label>Consultas Alumno</label>
                 <div class="lista-consulta">
                     <ul>
-                        <li><a href="#">Datos personales</a></li>
-                        <li><a href="#">Productividad</a></li>
-                        <li><a href="#">Modificar datos</a></li>
+                        <li><a href="#" onclick="cambiarDPersonales();">Datos personales</a></li>
+                        <li><a href="#" onclick="cambiarProductividad();">Productividad</a></li>
+                        <li><a href="#" onclick="cambiarMDatos();">Modificar datos</a></li>
                         <li><a href="index.html">Añadir nuevos productos</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="visualizacion-datos">
-            <h1>Visualizacion de datos</h1>
+
+        <div class="wrap-datos">
+            <div class="datos-personales" id="idPersonales">
+                <h1>Datos Personales</h1>
+
+                <div class="dp-campo">
+                    <div>
+                        <label>Nombre(s)</label>
+                        <div class="Idp-campo">
+                            <input id="Idp-nombre" type="text" readonly="readonly"/>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <div class="dp-campo">
+                    
+                    <div class="dp-apellidoM">
+                        <label>Apellidos</label>
+                        <div class="Idp-campo">
+                            <input id="Idp-apellidoP" type="text" readonly="readonly"/>
+                            <input id="Idp-apellidoP" type="text" readonly="readonly"/>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="dp-campo">
+                    
+                    <div class="dp-boleta">
+                        <label>Boleta</label>
+                        <div class="Idp-campo">
+                            <input id="Idp-apellidoP" type="text" readonly="readonly"/>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="dp-campo">
+                    
+                    <div class="dp-CURP">
+                        <label>CURP</label>
+                        <div class="Idp-campo">
+                            <input id="Idp-apellidoP" type="text" readonly="readonly"/>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="dp-campo">
+                    
+                    <div class="dp-FNacimiento">
+                        <label>Fecha Nacimiento</label>
+                        <div class="Idp-campo">
+                            <input id="Idp-apellidoP" type="text" readonly="readonly"/>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="dp-campo">
+                    
+                    <div class="dp-email">
+                        <label>Correo Electronico</label>
+                        <div class="Idp-campo">
+                            <input id="Idp-apellidoP" type="text" readonly="readonly"/>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="productividad" id="idProductividad">
+                <h1>Productividad</h1>
+
+                <div class="dp-campo">
+                    <div>
+                        <label>Nombre(s)</label>
+                        <div class="Idp-campo">
+                            <input id="Idp-nombre" type="text"/>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <div class="dp-campo">
+                    
+                    <div class="dp-apellidoM">
+                        <label>Apellidos</label>
+                        <div class="Idp-campo">
+                            <input id="Idp-apellidoP" type="text"/>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="dp-campo">
+                    
+                    <div class="dp-apellidoM">
+                        <label>CURP</label>
+                        <div class="Idp-campo">
+                            <input id="Idp-apellidoP" type="text"/>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="dp-campo">
+                    
+                    <div class="dp-apellidoM">
+                        <label>Fecha Nacimiento</label>
+                        <div class="Idp-campo">
+                            <input id="Idp-apellidoP" type="text"/>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="dp-campo">
+                    
+                    <div class="dp-apellidoM">
+                        <label>Correo Electronico</label>
+                        <div class="Idp-campo">
+                            <input id="Idp-apellidoP" type="text"/>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="modificar-datos" id="idModificarDatos">
+                <h1>Modificar Datos</h1>
+
+                <div class="dp-campo">
+                    <div>
+                        <label>Nombre(s)</label>
+                        <div class="Idp-campo">
+                            <input id="Idp-nombre" type="text"/>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <div class="dp-campo">
+                    
+                    <div class="dp-apellidoM">
+                        <label>Apellidos</label>
+                        <div class="Idp-campo">
+                            <input id="Idp-apellidoP" type="text"/>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="dp-campo">
+                    
+                    <div class="dp-apellidoM">
+                        <label>CURP</label>
+                        <div class="Idp-campo">
+                            <input id="Idp-apellidoP" type="text"/>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="dp-campo">
+                    
+                    <div class="dp-apellidoM">
+                        <label>Fecha Nacimiento</label>
+                        <div class="Idp-campo">
+                            <input id="Idp-apellidoP" type="text"/>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="dp-campo">
+                    
+                    <div class="dp-apellidoM">
+                        <label>Correo Electronico</label>
+                        <div class="Idp-campo">
+                            <input id="Idp-apellidoP" type="text"/>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
+        
     </div>
 
+    <script src="../js/funciones.js"></script>
     
 </body>
 </html>
