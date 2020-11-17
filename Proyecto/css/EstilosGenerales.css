@@ -1,3 +1,9 @@
+.barra-navegacion div ul li a:hover{
+  color: #868585;
+  height: 90px;
+}
+
+
 .datos{
   font-size: 25;
   color: black;
@@ -22,7 +28,7 @@ flex-grow: 1;
 .hijo{
   background:rgba(104,36,68,.9);
   width: auto;
-  height: 300px;
+  height: 120px;
   color: white;
   margin: 30px;
   padding: 20px;
@@ -37,7 +43,7 @@ background:white;
 width: auto;
 height: auto;
 color:black;
-
+border:  solid  #722f37;
 margin: 8px;
 padding: 12px;
 font-size: 15;
@@ -121,13 +127,13 @@ flex-wrap: wrap;
 }
 
 body {
-  background: #5e2129;
+  background: white;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(right, #5e2129, #1c212b);
+  /*background: -webkit-linear-gradient(right, #5e2129, #1c212b);
   background: -moz-linear-gradient(right, #5e2129, #1c212b);
   background: -o-linear-gradient(right, #5e2129, #1c212b);
   background: linear-gradient(to left, #5e2129, #1c212b);
-  font-family: sans-serif;
+  font-family: sans-serif;*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
