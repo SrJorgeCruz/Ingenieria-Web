@@ -185,6 +185,7 @@ a{
     margin: 5px auto;
     width: 25%;
     max-width: 350px;
+    min-width: 150px;
 }
 
 .main-page{
@@ -193,7 +194,8 @@ a{
     margin: 0px auto ;
     padding: 5px;
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
+    flex-wrap: wrap;  
 }
 
 .barra-navegacion div ul li a:hover{
