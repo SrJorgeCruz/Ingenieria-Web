@@ -1,6 +1,45 @@
+
 .barra-navegacion div ul li a:hover{
   color: #868585;
-  height: 90px;
+}
+
+.barra-navegacion div ul li a{
+  color: #FFFFFF;
+  padding: 15px 0px;
+}
+
+.barra-navegacion div ul li{
+  margin: 0px 15px;
+  border-color: #FFFFFF;
+}
+
+.barra-navegacion div ul{
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.barra-navegacion div{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.barra-navegacion{
+  margin: 0px auto;
+  width: 90%;
+  height: 51px;
+  background: rgba(104, 36, 68, 0.98);
+  text-decoration: none;
+}
+
+.barra-navegacion a{
+ 
+  text-decoration: none;
+  background-color: transparent;
+  font-family: sans-serif;
 }
 
 
@@ -43,9 +82,7 @@ background:white;
 width: auto;
 height: auto;
 color:black;
-border:  solid  #722f37;
-margin: 8px;
-padding: 12px;
+
 font-size: 15;
 text-align: left;
 display: flex;
@@ -55,7 +92,7 @@ flex-wrap: wrap;
 
 .login-page {
   width: 90%;
-  padding: 8% 0 0;
+  padding: 0 0 0;
   margin: auto;
 }
 
@@ -78,7 +115,7 @@ flex-wrap: wrap;
   border-radius: 7px;
   margin-bottom: 15px;
   padding: 15px;
-  box-sizing: auto;
+  box-sizing: 300px;
   font-size: 0.9em;
 }
 
@@ -139,9 +176,10 @@ body {
 }
 
 .header {
-  width: auto;
+  width: 90%;
   height: auto;
-  padding: 5px;
+  padding: 0px;
+  margin: 0px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -149,12 +187,15 @@ body {
 
 .header img {
   width: auto;
-  margin: 5px;
+  margin: 0px 5px 0px;
 }
 
 .header h1 {
-  color: white;
+  text-align: center;
+  color:#363636;
 }
+
+
 
 .titulo {
   width: 80%;
@@ -174,6 +215,8 @@ body {
   color: white;
   text-decoration: none;
 }
+
+
 
 
 
