@@ -80,7 +80,7 @@
                     <div class="dp-boleta">
                         <label>Boleta</label>
                         <div class="Idp-campo">
-                            <input id="Idp-Boleta" type="text" readonly="readonly"/>
+                            <input id="Idp-Boleta" type="text" readonly="readonly" placeholder="Boleta"/>
                         </div>
                         
                     </div>
@@ -91,7 +91,7 @@
                     <div class="dp-CURP">
                         <label>CURP</label>
                         <div class="Idp-campo">
-                            <input id="Idp-CURP" type="text" readonly="readonly"/>
+                            <input id="Idp-CURP" type="text" readonly="readonly" placeholder="CURP"/>
                         </div>
                         
                     </div>
@@ -102,7 +102,7 @@
                     <div class="dp-FNacimiento">
                         <label>Fecha Nacimiento</label>
                         <div class="Idp-campo">
-                            <input id="Idp-FNacimiento" type="text" readonly="readonly"/>
+                            <input id="Idp-FNacimiento" type="text" readonly="readonly" placeholder="Fecha de Nacimiento"/>
                         </div>
                         
                     </div>
@@ -113,7 +113,7 @@
                     <div class="dp-email">
                         <label>Correo Electronico</label>
                         <div class="Idp-campo">
-                            <input id="Idp-email" type="text" readonly="readonly"/>
+                            <input id="Idp-email" type="text" readonly="readonly" placeholder="Correo Electronico"/>
                         </div>
                         
                     </div>
@@ -136,38 +136,33 @@
                     <a href="#quinto" class="tab-e">Hardware/Software</a>
           
                     <div id="pnl_1">
-                      <div id="datos">
-                          <h1>pnl_1</h1>
+                      <div id="datos-pnl_1">
                       </div>
                     </div>
           
                     <div id="pnl_2">
-                      <div>
-                        <h1>pnl_2</h1>
+                      <div id="datos-pnl_2">
                       </div>
                     </div>
           
                     <div id="pnl_3">
-                      <div>
-                        <h1>pnl_3</h1>
+                      <div id="datos-pnl_3">
                       </div>
                     </div>
 
                     <div id="pnl_4">
-                        <div>
-                          <h1>pnl_4</h1>
+                        <div id="datos-pnl_4">
                         </div>
                     </div>
 
                     <div id="pnl_5">
-                        <div>
-                          <h1>pnl_5</h1>
+                        <div id="datos-pnl_5">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="modificar-datos" id="idModificarDatos">
+            <div class="modificar-datos-personales" id="idModificarDatos">
                 <h1>Modificar Datos</h1>
                 <form action="#" method="GET">
 
@@ -175,7 +170,7 @@
                         <div>
                             <label for = "Idp-nombre">Nombre(s)</label>
                             <div class="Idp-campo">
-                                <input type="text" id="Idp-nombre" placeholder="Nombre" name="Idp-nombre"/>
+                                <input type="text" id="Idp-nombreM" placeholder="Nombre" name="Idp-nombre" required/>
                             </div>
                             
                         </div>
@@ -186,8 +181,8 @@
                         <div class="dp-apellidoM">
                             <label for="Idp-apellidoP">Apellidos</label>
                             <div class="Idp-campo">
-                                <input id="Idp-apellidoP" type="text" placeholder="Apellido Paterno" name="APaterno"/>
-                                <input id="Idp-apellidoM" type="text" placeholder="Apellido Paterno" name="AMaterno"/>
+                                <input id="Idp-apellidoPM" type="text" placeholder="Apellido Paterno" name="APaterno" required/>
+                                <input id="Idp-apellidoMM" type="text" placeholder="Apellido Paterno" name="AMaterno" required/>
                             </div>
                             
                         </div>
@@ -197,7 +192,7 @@
                         <div class="dp-apellidoM">
                             <label for="Idp-CURP">CURP</label>
                             <div class="Idp-campo">
-                                <input id="Idp-CURP" type="text" placeholder="CURP" name="CURP"/>
+                                <input id="Idp-CURPM" type="text" placeholder="CURP" name="CURP" required/>
                             </div>
                             
                         </div>
@@ -207,7 +202,7 @@
                         <div class="dp-apellidoM">
                             <label for = "Idp-FNacimiento">Fecha Nacimiento</label>
                             <div class="Idp-campo">
-                                <input id="Idp-FNacimiento" type="date" placeholder="Fecha de Nacimiento" name="FNacimiento"/>
+                                <input id="Idp-FNacimientoM" type="date" placeholder="Fecha de Nacimiento" name="FNacimiento" required/>
                             </div>   
                         </div>
                     </div>
@@ -216,7 +211,7 @@
                         <div class="dp-apellidoM">
                             <label for="Idp-email">Correo Electronico</label>
                             <div class="Idp-campo">
-                                <input id="Idp-email" type="text" placeholder="Correo Electronico" name="Email"/>
+                                <input id="Idp-emailM" type="email" placeholder="Correo Electronico" name="Email" required/>
                             </div>
                             
                         </div>
@@ -226,11 +221,15 @@
                 </form>
                 
             </div>
+
+            <div class="datos-productos" id="idProductos">
+                
+            </div>
         </div>
-        
     </div>
 
     <script src="../js/funciones.js"></script>
+    <script src="../js/lecturaJSON.js"></script>
     
 </body>
 </html>

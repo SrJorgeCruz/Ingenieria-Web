@@ -1,4 +1,6 @@
-.modificar-datos{
+
+
+.modificar-datos-personales{
     display: none;
 }
 
@@ -34,12 +36,15 @@ span.diana {
     border: none;
     clear: both;
     overflow: hidden;
+    border: 1px solid  rgba(104, 36, 68, 1);
+    background-color: rgba(104, 36, 68, 0.90);
+    border-radius: 0 0 8px 8px;
 }
   
 #pnl_1>div, #pnl_2>div, #pnl_3>div, #pnl_4>div, #pnl_5>div {
-    opacity: 0;
     transition: all 0.1s ease;
     padding: 30px;
+    display: none;
 }
   
 #uno:target~#pnl_1, #dos:target~#pnl_2, #tres:target~#pnl_3, #cuatro:target~#pnl_4, #quinto:target~#pnl_5 {
@@ -48,7 +53,7 @@ span.diana {
 }
   
 #uno:target~#pnl_1>div, #dos:target~#pnl_2>div, #tres:target~#pnl_3>div, #cuatro:target~#pnl_4>div, #quinto:target~#pnl_5>div {
-    opacity: 1;
+    display: block;
     transition: all 1s ease;
 }
 
@@ -147,7 +152,6 @@ span.diana {
     margin: auto;
     margin-top: 5px;
     margin-bottom: 5px;
-    border: solid;
     padding: 10px 5%;
 }
 
@@ -175,7 +179,9 @@ a{
 }
 
 .lista-navegacion{
+    margin: auto auto auto 10px;
     width: 90%;
+    min-width: 160px;
     color: rgba(255,255,255,1);
     background-color: rgba(104,36,68,.9);
     padding: 10px;
@@ -191,11 +197,11 @@ a{
 .main-page{
     width: 90%;
     height: auto;
-    margin: 0px auto ;
-    padding: 5px;
+    margin: 0px auto;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;  
+    flex-wrap: wrap;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 .barra-navegacion div ul li a:hover{
