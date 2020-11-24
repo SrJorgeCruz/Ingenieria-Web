@@ -99,4 +99,3 @@ function cambiarMDatos(){
   P.style.display = "none";
   MD.style.display = "block";
 }
-

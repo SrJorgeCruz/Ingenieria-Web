@@ -125,7 +125,7 @@
           </div>
       </form>
 
-      <form id="lf" class="login-form" novalidate>
+      <form id="lf" name="lf" class="login-form" novalidate>
         <div class="hijo1">
           <div class="titulo">  
           <nav><h1>Artículos de Revistas</h1> 
@@ -156,18 +156,18 @@
 
           <div class="datos, cajitaDato">
             <label class="control-label" for="indice">Índice de la revista*</label>
-            <select name="indice"  required>
-              <option value= 0>Seleccione una opcion</option>
+            <select  id="id_opcion" name="indice"  onchange="carg(this);" required>
+              <option value="0">Seleccione una opcion</option>
               <option value="1">JCR</option>
               <option value="2">CONACYT</option>
-              <option value="3">Otro</option>
+              <option value="3">Otro</option> 
             </select>
             <div class="messages"></div>
           </div>
 
           <div class="datos, cajitaDato">
             <label class="control-label" for="opcion">¿Cual?*</label>
-            <input name="opcion" type="text" placeholder="Otro" required />
+            <input id="otro"name="opcion" type="text" placeholder="Otro" disabled/>
             <div class="messages"></div>
           </div>
           
@@ -413,6 +413,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
   <script src="../js/validarF1.js"></script>
   <script src="../js/validarF2.js"></script>
   <script src="../js/funciones.js"></script>  

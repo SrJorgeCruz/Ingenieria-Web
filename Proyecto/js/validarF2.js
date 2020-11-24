@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded",function() {
         presence:{
             message:"Obligatorio"
         },
-        //message:"Debe tener titulo"
     },
     nombre:{
         presence:{
@@ -50,15 +49,17 @@ document.addEventListener("DOMContentLoaded",function() {
     },
     opcion:
     {
-        presence:{
-            message:"Obligatoria"
-        }
+        presence:false
     },
 
     issn:
     {
         presence:{
             message:"Obligatorio"
+        },
+        format:{
+          pattern:"(ISSN|eISSN) [0-9]{4}-[0-9]{3}[0-9Xx]",
+          message:"tiene que ser válido"
         }
     },
 
@@ -92,7 +93,9 @@ document.addEventListener("DOMContentLoaded",function() {
         {
             message:"Obligatorio"
         },
-        //url:true
+        url:{
+            message:"tiene que ser válida"
+        }
     }
     };
 
