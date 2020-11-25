@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded",function() {
     titulo:{
         presence:{
             message:"obligatorio"
-        },
+        }
         //message:"Debe tener titulo"
     },
     nombre:{
@@ -44,6 +44,20 @@ document.addEventListener("DOMContentLoaded",function() {
         presence:{
             message:"obligatorio"
         },
+        
+      exclusion:{
+        within: ["0"],
+        message:"Obligatorio"
+    }
+    },
+    tema: {
+      presence:{
+        message:"Obligatorio"
+      },
+      exclusion:{
+          within: ["0"],
+          message:"Obligatorio"
+      }
     }
     };
 
@@ -55,7 +69,7 @@ document.addEventListener("DOMContentLoaded",function() {
     });
 
     // Hook up the inputs to validate on the fly
-    var inputs = document.querySelectorAll("input, textarea, select")
+    var inputs = document.querySelectorAll(" input, textarea, select")
     for (var i = 0; i < inputs.length; ++i) {
       inputs.item(i).addEventListener("change", function(ev) {
         var errors = validate(form, constraints) || {};

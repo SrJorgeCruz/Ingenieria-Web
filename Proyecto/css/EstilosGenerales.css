@@ -1,4 +1,7 @@
 
+
+
+
 .barra-navegacion div ul li a:hover{
   color: #868585;
 }
@@ -53,13 +56,14 @@
 .cajitaDato{
 font-family: sans-serif;
 background:white;
-width: auto;
+width: 90%;
 height: auto;
 margin: 20px;
 padding: 20px;
 text-align: left;
 display: flex;
-flex-grow: 1;
+flex-wrap: 1;
+
 
 }
 
@@ -84,7 +88,6 @@ background:white;
 width: auto;
 height: auto;
 color:black;
-
 font-size: 15;
 text-align: left;
 display: flex;
@@ -119,6 +122,8 @@ flex-wrap: wrap;
   padding: 15px;
   box-sizing: 300px;
   font-size: 0.9em;
+  flex-wrap: 1;
+  
 }
 
 /*
@@ -198,7 +203,6 @@ body {
   text-align: center;
   color:#363636;
 }
-
 
 
 .titulo {
