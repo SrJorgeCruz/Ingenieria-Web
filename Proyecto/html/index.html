@@ -82,11 +82,13 @@
           
             <div class="datos, cajitaDato">
               <label class="control-label" for="titulo">Título del artículo*</label>
+            <!--  <textarea name="titulo" id="titulo" required>Titulo</textarea>-->
               <input id="titulo" type="text" placeholder="titulo" name="titulo" required />
               <div class="messages"></div>
             </div>
             <div class="datos, cajitaDato">
               <label class="control-label" for="nombre">Nombre del congreso*</label>
+             <!-- <textarea name="nombre" id="nombre" cols="30" rows="3" placeholder="nombre" required></textarea>-->
               <input id="nombre" type="text" placeholder="nombre" name="nombre"required />
               <div class="messages"></div>
             </div>
@@ -98,10 +100,11 @@
               <div class="messages"></div>
               </div>
         
+
         
               <div class="datos, cajitaDato">
         
-                <label class="control-label" for="autor">*</label>
+                <label class="control-label" for="autor">Seleccione un campo</label>
                 <select id="autor" name="autor"  required>
                   <option value="0">Seleccione una opción</option>
                   <option value="1">Autor Principal</option>
@@ -113,8 +116,8 @@
 
               <div class="datos, cajitaDato">
         
-                <label class="control-label" for="opcion" >¿Esta asociado a tu tema de tesis?*</label>
-                <select name="opcion"   required>
+                <label class="control-label" for="tema" >¿Esta asociado a tu tema de tesis?*</label>
+                <select id="tema" name="tema"  required>
                   <option value="0">Seleccione una opción</option>
                   <option value="1">Si</option>
                   <option value="2">No</option>
@@ -128,6 +131,7 @@
             <button type="submit">Guardar</button>
           </div>
       </form>
+      
 
       <form id="lf" name="lf" class="login-form" novalidate>
         <div class="hijo1">
@@ -170,7 +174,7 @@
           </div>
 
           <div class="datos, cajitaDato">
-            <label class="control-label" for="opcion">¿Cual?*</label>
+            <label class="control-label" for="opcion">  Indique el indice de la revista    </label>
             <input id="otro"name="opcion" type="text" placeholder="Otro" disabled/>
             <div class="messages"></div>
           </div>
@@ -188,7 +192,7 @@
           </div>
  
           <div class="datos, cajitaDato">
-            <label class="control-label" for="autor">*</label>
+            <label class="control-label" for="autor">Seleccione una opción</label>
             <select name="autor" required>
               <option value="0">Seleccione una opción</option>
               <option value="1">Autor Principal</option>
@@ -216,7 +220,7 @@
             <button type="submit">Guardar</button>
           </div>
       </form>
-
+      
       <form id="cf" class="login-form" novalidate>
         <div class="hijo1">
           <!--<div class="hijo1">-->
@@ -232,13 +236,13 @@
             </div>
 
             <div class="datos, cajitaDato">
-              <label class="control-label" for="editorial">Editorial*</label>
+              <label class="control-label" for="editorial">Editorial del libro*</label>
               <input type="text" placeholder="Editorial" name ="editorial"required />
               <div class="messages"></div>
             </div>
               
             <div class="datos, cajitaDato">
-              <label class="control-label" for="edicion">Edición*</label>
+              <label class="control-label" for="edicion">Edición del libro*</label>
               <input type="text" placeholder="Edición" name="edicion"required />
               <div class="messages"></div>
             </div>
@@ -293,13 +297,13 @@
             </div>
           
             <div class="datos, cajitaDato">
-              <label class="control-label" for="isbn">ISBN*</label>
+              <label class="control-label" for="isbn">ISBN del libro*</label>
               <input type="text" placeholder="ISBN" name="isbn"required />
               <div class="messages"></div>
             </div>
               
             <div class="datos, cajitaDato">
-              <label class="control-label" for="autor">*</label>
+              <label class="control-label" for="autor">elige una opción</label>
               <select   name="autor"required>
                 <option value="0">Seleccione una opción</option>
                 <option value="1">Autor Principal</option>
@@ -346,13 +350,13 @@
             </div>
             
             <div class="datos, cajitaDato">
-              <label class="control-label" for="editorial">Editorial*</label>
+              <label class="control-label" for="editorial">Editorial del libro*</label>
               <input name="editorial"type="text" placeholder="Editorial" required />
               <div class="messages"></div>
             </div>
 
             <div class="datos, cajitaDato">
-              <label class="control-label" for="edicion">Edición*</label>
+              <label class="control-label" for="edicion">Edición de libro*</label>
               <input name="edicion" type="text" placeholder="Edición" required />
               <div class="messages"></div>
             </div>
@@ -407,13 +411,13 @@
             </div>
                 
             <div class="datos, cajitaDato">
-              <label class="control-label" for="isbn">ISBN*</label>
+              <label class="control-label" for="isbn">ISBN del libro*</label>
               <input name="isbn"type="text" placeholder="ISBN" required />
               <div class="messages"></div>
             </div>
     
             <div class="datos, cajitaDato">
-              <label class="control-label" for="autor">*</label>
+              <label class="control-label" for="autor">elige una opción</label>
               <select name="autor"  required>
                 <option value="0">Seleccione una opcion</option>
                 <option value="1">Autor Principal</option>
@@ -455,7 +459,7 @@
             </div>
             
             <div class="datos, cajitaDato">
-              <label class="control-label" for="titulo">Título*</label>
+              <label class="control-label" for="titulo">Título de Hardware o Sofware</label>
               <input name="titulo"type="text" placeholder="Título" required />
               <div class="messages"></div>
             </div>
@@ -516,7 +520,7 @@
             </div>
               
             <div class="datos, cajitaDato">
-              <label class="control-label" for="autor">*</label>
+              <label class="control-label" for="autor">Seleccione una opción</label>
               <select name="autor"  required>
                 <option value="0">Seleccone una opción</option>
                 <option value="1">Autor Principal</option>
@@ -555,12 +559,12 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <script src="../js/validarF1.js"></script>
-  <script src="../js/validarF2.js"></script>
-  <script src="../js/validarF3.js"></script>
-  <script src="../js/validarF4.js"></script>
   <script src="../js/validarF5.js"></script>
-  <script src="../js/funciones.js"></script>  
+  <script src="../js/validarF4.js"></script>
+  <script src="../js/validarF3.js"></script>
+  <script src="../js/validarF2.js"></script>
+  <script src="../js/validarF1.js"></script>
+  <script src="../js/funciones.js"></script>
 </body>
 
 </html>

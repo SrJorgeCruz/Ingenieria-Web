@@ -49,11 +49,11 @@ document.addEventListener("DOMContentLoaded",function() {
     {
         presence:{
             message:"Obligatorio"
-        },
-        format:{
+        }
+        /*format:{
           pattern:"^(?:ISBN(?:-10)?:?●)?(?=[0-9X]{10}$|(?=(?:[0-9]+[-●]){3})[-●0-9X]{13}$)↵[0-9]{1,5}[-●]?[0-9]+[-●]?[0-9]+[-●]?[0-9X]$",
           message:"tiene que ser válido"
-        }
+        }*/
     },
 
     autor:{

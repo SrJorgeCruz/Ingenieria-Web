@@ -7,7 +7,8 @@ function cambiarFormLF() {
   cf.style.display = "none";
   rf.style.display = "none";
   lf.style.display = "block";
-  df.style.display ="none";
+  df.style.display = "none";
+  ef.style.display = "none";
 }
 
 function cambiarFormRF() {
@@ -19,7 +20,7 @@ function cambiarFormRF() {
   cf.style.display = "none";
   lf.style.display = "none";
   rf.style.display = "block";
-  df.style.display =" none";
+  df.style.display = "none";
   ef.style.display = "none";
 }
 
