@@ -96,10 +96,19 @@ span.diana {
     width: 75%;
 }
 
+.messages p{
+    width: 100%;
+    height: auto;
+    padding-right: 15px;
+}
+
 .wrap-datos .dp-campo div{
     margin-top: 5px;
     display: flex;
     flex-direction: row;
+    text-align: right;
+    width: 100%;
+    height: auto;
 }
 
 .wrap-datos h1{

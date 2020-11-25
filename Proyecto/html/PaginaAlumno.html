@@ -167,14 +167,13 @@
                 <form action="#" method="GET">
 
                     <div class="dp-campo">
-                        <div>
-                            <label for = "Idp-nombre">Nombre(s)</label>
+                        <div class="dp-nombre">
+                            <label class="labelchido" for = "Idp-nombre">Nombre(s)</label>
                             <div class="Idp-campo">
                                 <input type="text" id="Idp-nombreM" placeholder="Nombre" name="Idp-nombre" required/>
                             </div>
-                            
                         </div>
-    
+                        <div class="messages"></div>
                     </div>
     
                     <div class="dp-campo">
@@ -183,9 +182,9 @@
                             <div class="Idp-campo">
                                 <input id="Idp-apellidoPM" type="text" placeholder="Apellido Paterno" name="APaterno" required/>
                                 <input id="Idp-apellidoMM" type="text" placeholder="Apellido Paterno" name="AMaterno" required/>
-                            </div>
-                            
+                            </div>  
                         </div>
+                        <div class="messages"></div>
                     </div>
     
                     <div class="dp-campo">
@@ -205,6 +204,7 @@
                                 <input id="Idp-FNacimientoM" type="date" placeholder="Fecha de Nacimiento" name="FNacimiento" required/>
                             </div>   
                         </div>
+                        <div class="messages"></div>
                     </div>
     
                     <div class="dp-campo">
@@ -213,8 +213,8 @@
                             <div class="Idp-campo">
                                 <input id="Idp-emailM" type="email" placeholder="Correo Electronico" name="Email" required/>
                             </div>
-                            
                         </div>
+                        <div class="messages"></div>
                     </div>
 
                     <button type="submit">Guardar</button>
@@ -229,7 +229,7 @@
     </div>
 
     <script src="../js/funciones.js"></script>
-    <script src="../js/lecturaJSON.js"></script>
+    <script src="../js/lecturaJSONAlumno.js"></script>
     
 </body>
 </html>
