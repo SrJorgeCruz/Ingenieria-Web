@@ -56,15 +56,13 @@
 .cajitaDato{
 font-family: sans-serif;
 background:white;
-width: 600px;
+width: 500px;
 height: auto;
 margin: 0px;
 padding: 10px;
 text-align: left;
 display: flex;
 flex-wrap: 1;
-
-
 }
 
 
