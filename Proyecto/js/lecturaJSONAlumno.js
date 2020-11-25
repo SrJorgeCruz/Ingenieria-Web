@@ -91,11 +91,12 @@ function llenadoProductividad(jsonObj){
         myArticle.appendChild(myPara2);
         myArticle.appendChild(myPara3);
         myArticle.appendChild(myPara4);
-
+        
         myA.appendChild(myArticle);
         myA.href = 'index.html'
     
         pnl.appendChild(myA);
+        pnl.appendChild(document.createElement('hr'));
       }
 
       for (var i = 0; i < ARevista.length; i++) {
@@ -144,6 +145,7 @@ function llenadoProductividad(jsonObj){
         myA.href = 'index.html'
     
         pnl.appendChild(myA);
+        pnl.appendChild(document.createElement('hr'));
       }
 
       for (var i = 0; i < CLibro.length; i++) {
@@ -184,6 +186,7 @@ function llenadoProductividad(jsonObj){
         myA.href = 'index.html'
     
         pnl.appendChild(myA);
+        pnl.appendChild(document.createElement('hr'));
       }
 
       for (var i = 0; i < libro.length; i++) {
@@ -224,6 +227,7 @@ function llenadoProductividad(jsonObj){
         myA.href = 'index.html'
     
         pnl.appendChild(myA);
+        pnl.appendChild(document.createElement('hr'));
       }
 
       for (var i = 0; i < h_s.length; i++) {
@@ -258,6 +262,7 @@ function llenadoProductividad(jsonObj){
         myA.href = 'index.html'
     
         pnl.appendChild(myA);
+        pnl.appendChild(document.createElement('hr'));
       }
 
 

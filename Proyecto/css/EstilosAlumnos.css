@@ -130,7 +130,7 @@ span.diana {
     cursor: not-allowed;
 }
 
-.wrap-datos input{
+.wrap-datos input, .wrap-datos select{
     font-family: sans-serif;
     background: #f5f5f5;
     
@@ -273,7 +273,9 @@ a{
     color:#363636;
 }
 
-
+.tabs-coordinador p,.tabs-coordinador h2{
+    color: rgba(255,255,255,1);
+}
 
 body {
     background: #FFFFFF;
