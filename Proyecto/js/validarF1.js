@@ -44,6 +44,10 @@ document.addEventListener("DOMContentLoaded",function() {
         presence:{
             message:"obligatorio"
         },
+        exclusion:{
+          within: ["0"],
+          message:"Obligatorio"
+      }
     }
     };
 
