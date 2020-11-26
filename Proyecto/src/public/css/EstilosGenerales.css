@@ -1,0 +1,231 @@
+
+
+
+
+.barra-navegacion div ul li a:hover{
+  color: #868585;
+}
+
+.barra-navegacion div ul li a{
+  color: #FFFFFF;
+  padding: 15px 0px;
+}
+
+.barra-navegacion div ul li{
+  margin: 0px 15px;
+  border-color: #FFFFFF;
+}
+
+.barra-navegacion div ul{
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.barra-navegacion div{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.barra-navegacion{
+  margin: 0px auto;
+  width: 90%;
+  height: 51px;
+  background: rgba(104, 36, 68, 0.98);
+  text-decoration: none;
+}
+
+.barra-navegacion a{
+ 
+  text-decoration: none;
+  background-color: transparent;
+  font-family: sans-serif;
+}
+
+
+.datos{
+  font-family: sans-serif;
+  font-size: 25;
+  color: black;
+  font-family: sans-serif;
+}
+
+.cajitaDato{
+font-family: sans-serif;
+background:white;
+width: 500px;
+height: auto;
+margin: 0px;
+padding: 10px;
+text-align: left;
+display: flex;
+flex-wrap: 1;
+}
+
+
+
+.hijo{
+  background:rgba(104,36,68,.9);
+  width: auto;
+  height: 120px;
+  color: white;
+  margin: 30px;
+  padding: 20px;
+  font-family: sans-serif;
+  font-size: 15;
+  text-align: left;
+  flex-wrap: 1;
+  flex-shrink: 0;
+}
+
+.hijo1{
+background:white;
+width: auto;
+height: auto;
+color:black;
+font-size: 15;
+text-align: left;
+display: flex;
+flex-wrap: wrap;
+}
+
+
+.login-page {
+  width: 90%;
+  padding: 0 0 0;
+  margin: auto;
+}
+
+.form {
+  width: auto;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  margin: 0 auto 100px;
+  padding: 45px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input, .form select {
+  font-family: sans-serif;
+  background: #f5f5f5;
+  width: 80%;
+  border: 1px solid #f5f5f5;
+  border-radius: 7px;
+  margin-bottom: 15px;
+  padding: 15px;
+  box-sizing: 300px;
+  font-size: 0.9em;
+  flex-wrap: 1;
+  
+}
+
+/*
+.form input:valid {
+    border-color:green;
+}
+
+.form input:invalid{
+    border-color:red;
+}
+*/
+.form button {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #722f37;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.form button:hover, .form button:active, .form button:focus {
+  background: #5e2129;
+}
+
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.form .login-form {
+  display: none;
+
+}
+
+body {
+  background: white;
+  /* fallback for old browsers */
+  /*background: -webkit-linear-gradient(right, #5e2129, #1c212b);
+  background: -moz-linear-gradient(right, #5e2129, #1c212b);
+  background: -o-linear-gradient(right, #5e2129, #1c212b);
+  background: linear-gradient(to left, #5e2129, #1c212b);
+  font-family: sans-serif;*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+  font-family: sans-serif;
+  width: 90%;
+  height: auto;
+  padding: 0px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header img {
+  width: auto;
+  margin: 0px 5px 0px;
+}
+
+.header h1 {
+  font-family: sans-serif;
+  text-align: center;
+  color:#363636;
+}
+
+
+.titulo {
+  font-family: sans-serif;
+  width: 80%;
+  text-align: center;
+}
+
+.titulado, .correo-skype {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+
+.hiper a{
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
