@@ -4,10 +4,10 @@ const fs = require('fs');
 const uuid = require('uuid4');
 
  
-const usuarioJSONr = fs.readFileSync('src/Estudiantes/GOJD001207HMCNMNA7.json','utf-8');
+const usuarioJSONr = fs.readFileSync('src/Estudiantes/CUMJ000723HMCRNRA8.json','utf-8');
 const usuario = JSON.parse(usuarioJSONr);
 
-const productosJSONr = fs.readFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json','utf-8');
+const productosJSONr = fs.readFileSync('src/Estudiantes/Productividad/CUMJ000723HMCRNRA8.json','utf-8');
 const productos = JSON.parse(productosJSONr);
 
 const listaJSONr = fs.readFileSync('src/Estudiantes/listaAlumnos.json','utf-8');
@@ -137,7 +137,7 @@ router.post('/guardarACongreso',(req, res) =>{
   // convierte a string el arreglo de objetos javascript
   const productosJSON = JSON.stringify(productos);
 
-  fs.writeFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json', productosJSON,'utf-8');
+  fs.writeFileSync('src/Estudiantes/Productividad/'+usuario.curp+'.json', productosJSON,'utf-8');
 
   res.redirect('/paginaAlumno');
 });
@@ -169,7 +169,7 @@ router.post('/guardarARevista',(req, res) =>{
   // convierte a string el arreglo de objetos javascript
   const productosJSON = JSON.stringify(productos);
 
-  fs.writeFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json', productosJSON,'utf-8');
+  fs.writeFileSync('src/Estudiantes/Productividad/'+usuario.curp+'.json', productosJSON,'utf-8');
 
   res.redirect('/paginaAlumno');
 });
@@ -198,7 +198,7 @@ router.post('/guardarCLibro',(req, res) =>{
   // convierte a string el arreglo de objetos javascript
   const productosJSON = JSON.stringify(productos);
 
-  fs.writeFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json', productosJSON,'utf-8');
+  fs.writeFileSync('src/Estudiantes/Productividad/'+usuario.curp+'.json', productosJSON,'utf-8');
 
   res.redirect('/paginaAlumno');
 });
@@ -227,7 +227,7 @@ router.post('/guardarlibro',(req, res) =>{
   // convierte a string el arreglo de objetos javascript
   const productosJSON = JSON.stringify(productos);
 
-  fs.writeFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json', productosJSON,'utf-8');
+  fs.writeFileSync('src/Estudiantes/Productividad/'+usuario.curp+'.json', productosJSON,'utf-8');
 
   res.redirect('/paginaAlumno');
 });
@@ -254,7 +254,7 @@ router.post('/guardarhardwareSoftware',(req, res) =>{
   // convierte a string el arreglo de objetos javascript
   const productosJSON = JSON.stringify(productos);
 
-  fs.writeFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json', productosJSON,'utf-8');
+  fs.writeFileSync('src/Estudiantes/Productividad/'+usuario.curp+'.json', productosJSON,'utf-8');
 
   res.redirect('/paginaAlumno');
 });
@@ -287,7 +287,7 @@ router.post('/modificarACongreso',(req, res) =>{
   // convierte a string el arreglo de objetos javascript
   const productosJSON = JSON.stringify(productos);
 
-  fs.writeFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json', productosJSON,'utf-8');
+  fs.writeFileSync('src/Estudiantes/Productividad/'+usuario.curp+'.json', productosJSON,'utf-8');
   
   res.redirect('/paginaAlumno');
 });
@@ -334,7 +334,7 @@ router.post('/modificarARevista',(req, res) =>{
   // convierte a string el arreglo de objetos javascript
   const productosJSON = JSON.stringify(productos);
 
-  fs.writeFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json', productosJSON,'utf-8');
+  fs.writeFileSync('src/Estudiantes/Productividad/'+usuario.curp+'.json', productosJSON,'utf-8');
 
   res.redirect('/paginaAlumno');
 });
@@ -375,7 +375,7 @@ router.post('/modificarCLibro',(req, res) =>{
   // convierte a string el arreglo de objetos javascript
   const productosJSON = JSON.stringify(productos);
 
-  fs.writeFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json', productosJSON,'utf-8');
+  fs.writeFileSync('src/Estudiantes/Productividad/'+usuario.curp+'.json', productosJSON,'utf-8');
 
   res.redirect('/paginaAlumno');
 });
@@ -415,7 +415,7 @@ router.post('/modificarlibro',(req, res) =>{
   // convierte a string el arreglo de objetos javascript
   const productosJSON = JSON.stringify(productos);
 
-  fs.writeFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json', productosJSON,'utf-8');
+  fs.writeFileSync('src/Estudiantes/Productividad/'+usuario.curp+'.json', productosJSON,'utf-8');
 
   res.redirect('/paginaAlumno');
 });
@@ -451,7 +451,7 @@ router.post('/modificarhardwareSoftware',(req, res) =>{
   // convierte a string el arreglo de objetos javascript
   const productosJSON = JSON.stringify(productos);
 
-  fs.writeFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json', productosJSON,'utf-8');
+  fs.writeFileSync('src/Estudiantes/Productividad/'+usuario.curp+'.json', productosJSON,'utf-8');
 
   res.redirect('/paginaAlumno');
 });
