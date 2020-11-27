@@ -75,10 +75,13 @@
               <input name="edicion" type="text" placeholder="Edición"  value="<%=producto.edicion%>" />
               <div class="messages"></div>
             </div>
+          
             <div class="datos, cajitaDato">
               <label class="control-label" for="año">Año de publicación*</label>
               <select name ="año"type="text" >
-                <option value="0"><%=producto.añoPublicacion%></option>
+                
+                <option value="-1"><%=producto.añoPublicacion%></option>
+                <option value="0">Seleccione una opción</option>
                 <option value="1">2020</option>
                 <option value="2">2019</option>
                 <option value="3">2018</option>
