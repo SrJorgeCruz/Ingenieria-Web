@@ -232,22 +232,22 @@ router.post('/guardarlibro',(req, res) =>{
   res.redirect('/paginaAlumno');
 });
 
-router.post('/guardarlibro',(req, res) =>{
+router.post('/guardarhardwareSoftware',(req, res) =>{
   let {titulo, año, derecho, autor, tema, url} = req.body;
 
   const añoDesarrollo = año;
-  const dechosAutor = derecho;
+  const derechosAutor = derecho;
   const tipoAutor = autor;
   const asociado = tema;
   const URL = url;
 
   let producto = {
     titulo,
-    año,
-    derecho,
-    autor,
-    tema,
-    url
+    añoDesarrollo,
+    derechosAutor,
+    tipoAutor,
+    asociado,
+    URL
   };
   productos.hardwareSoftware.push(producto);
 

@@ -218,7 +218,7 @@
                                     <p>Derechos de autor: <%=producto.derechosAutor%></p>
                                     <p>Tipo de autor: <%=producto.tipoAutor%></p>
                                     <p>Asociado a tesis: <%=producto.asociado%></p>
-                                    <p><%=producto.URL%></p>
+                                    <p>URL: <%=producto.URL%></p>
                                 </a>   
                                 <hr>
                                 <%});%>
@@ -235,7 +235,7 @@
                         <div class="dp-nombre">
                             <label class="labelchido" for = "Idp-nombre">Nombre(s)</label>
                             <div class="Idp-campo">
-                                <input type="text" id="Idp-nombreM" placeholder="Nombre" name="Idp-nombre" required/>
+                                <input type="text" id="Idp-nombreM" placeholder="Nombre" name="Idp-nombre" value="<%=usuario.nombre%>" required/>
                             </div>
                         </div>
                         <div class="messages"></div>
@@ -245,8 +245,8 @@
                         <div class="dp-apellidoM">
                             <label for="Idp-apellidoP">Apellidos</label>
                             <div class="Idp-campo">
-                                <input id="Idp-apellidoPM" type="text" placeholder="Apellido Paterno" name="APaterno" required/>
-                                <input id="Idp-apellidoMM" type="text" placeholder="Apellido Paterno" name="AMaterno" required/>
+                                <input id="Idp-apellidoPM" type="text" placeholder="Apellido Paterno" name="APaterno" value="<%=usuario.apellidoP%>" required/>
+                                <input id="Idp-apellidoMM" type="text" placeholder="Apellido Paterno" name="AMaterno" value="<%=usuario.apellidoM%>" required/>
                             </div>  
                         </div>
                         <div class="messages"></div>
@@ -256,7 +256,7 @@
                         <div class="dp-CURPM">
                             <label for="Idp-CURP">CURP</label>
                             <div class="Idp-campo">
-                                <input id="Idp-CURPM" type="text" placeholder="CURP" name="CURP" required/>
+                                <input id="Idp-CURPM" type="text" placeholder="CURP" name="CURP" value="<%=usuario.curp%>" required/>
                             </div>
                         </div>
                         <div class="messages"></div>
@@ -266,7 +266,7 @@
                         <div class="dp-FNacimientoM">
                             <label for = "Idp-FNacimiento">Fecha Nacimiento</label>
                             <div class="Idp-campo">
-                                <input id="Idp-FNacimientoM" type="date" placeholder="Fecha de Nacimiento" name="FNacimiento" required/>
+                                <input id="Idp-FNacimientoM" type="date" placeholder="Fecha de Nacimiento" name="FNacimiento" value="<%=usuario.fechaNacimiento%>" required/>
                             </div>   
                         </div>
                         <div class="messages"></div>
@@ -276,7 +276,7 @@
                         <div class="dp-emailM">
                             <label for="Idp-email">Correo Electronico</label>
                             <div class="Idp-campo">
-                                <input id="Idp-emailM" type="email" placeholder="Correo Electronico" name="Email" required/>
+                                <input id="Idp-emailM" type="email" placeholder="Correo Electronico" name="Email" value="<%=usuario.email%>" required/>
                             </div>
                         </div>
                         <div class="messages"></div>
