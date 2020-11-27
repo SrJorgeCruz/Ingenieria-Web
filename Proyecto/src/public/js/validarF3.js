@@ -48,11 +48,11 @@ document.addEventListener("DOMContentLoaded",function() {
     {
         presence:{
             message:"Obligatorio"
-        }
-        /*format:{
-          pattern:"(ISSN|eISSN) [0-9]{4}-[0-9]{3}[0-9Xx]",
+        },
+        format:{
+          pattern:"^(?=(?:\D*\d){10}(?:(?:\D*\d){3})?$)[\d-]+$",
           message:"tiene que ser válido"
-        }*/
+        }
     },
 
     autor:{
