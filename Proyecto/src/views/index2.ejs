@@ -48,7 +48,7 @@
   <div class="login-page">
     <div class="form">
 
-      <form id="lf" class="register-form" novalidate>
+      <form id="lf" class="register-form" method="POST" action="/modificarARevista" novalidate>
         <div class="hijo1">
           <div class="titulo">  
           <nav><h1>Artículos de Revistas</h1> 
@@ -57,7 +57,7 @@
 
           <div class="datos, cajitaDato">
             <label class="control-label" for="titulo">Título del artículo*</label>
-            <input name="titulo" type="text" placeholder="Título del artículo"  value="<%=producto.titulo%>"/>
+            <input name="titulo" type="text" placeholder="Título del artículo" readonly="readonly"  value="<%=producto.titulo%>"/>
             <div class="messages"></div>
           </div>
 
@@ -71,7 +71,7 @@
             <label class="control-label" for="tipo">Tipo de revista*</label>
             <select name="tipo">
               <option value="<%=producto.tipoRevista%>"><%=producto.tipoRevista%></option>
-              <%if(producto.tipoRevistar == 'arbitrada'){%>
+              <%if(producto.tipoRevista == 'arbitrada'){%>
                 <option value="no arbitrada">no arbitrada</option>
                 <%}else{%>
                   
@@ -88,17 +88,17 @@
               <option value="1"><%=producto.indice%> </option>
                 
               <%if(producto.indice == 'JCR'){%>
-                <option value="2"> CONACYT</option>
-                <option value="3"> Otro</option>
+                <option value="CONACYT"> CONACYT</option>
+                <option value="Otro"> Otro</option>
 
                 <%}else if(producto.indice == 'CONACYT'){%>
                   
-                  <option value="2"> JCR</option>
-                  <option value="3"> Otro</option>
+                  <option value="JCR"> JCR</option>
+                  <option value="Otro"> Otro</option>
 
                 <%}else {%>
-                  <option value="2"> JCR</option>
-                  <option value="3"> CONACYT</option>
+                  <option value="JCR"> JCR</option>
+                  <option value="CONACYT"> CONACYT</option>
                   
                 <%}%>
             </select>
@@ -130,10 +130,10 @@
               <option value="1"><%=producto.tipoAutor%> </option>
               
               <%if(producto.tipoAutor == 'Coautor'){%>
-                <option value="2"> Autor Principal</option>
+                <option value="Autor Principal"> Autor Principal</option>
                 <%}else{%>
                   
-                  <option value="2"> Coautor</option>
+                  <option value="Coautor"> Coautor</option>
                 <%}%>
             
             </select>
@@ -146,10 +146,10 @@
               <option value="1"><%=producto.asociado%> </option>
               
               <%if(producto.asociado == 'No'){%>
-                <option value="2"> Si</option>
+                <option value="Si"> Si</option>
                 <%}else{%>
                   
-                  <option value="2"> No</option>
+                  <option value="No"> No</option>
                 <%}%>
                 
             </select>
@@ -163,7 +163,7 @@
           </div>
         </div>  
           <div class="">
-            <button type="submit" id="boton2">Guardar</button>
+            <button type="submit" id="boton2">Actualizar</button>
           </div>
       </form>
   

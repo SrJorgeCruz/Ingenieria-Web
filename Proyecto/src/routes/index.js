@@ -259,4 +259,205 @@ router.post('/guardarhardwareSoftware',(req, res) =>{
   res.redirect('/paginaAlumno');
 });
 
+
+router.post('/modificarACongreso',(req, res) =>{
+  let {titulo,nombre,fecha,autor,tema} = req.body;
+
+  const fechaEvento = fecha;
+  const tipoAutor = autor;
+  const asociado = tema;
+
+  let producto = {
+    titulo,
+    nombre,
+    fechaEvento, 
+    tipoAutor,
+    asociado
+  };
+
+  productos.ACongreso.map(function(element){
+    if(element.titulo == producto.titulo){
+      element.nombre=producto.nombre;
+      element.fechaEvento=producto.fechaEvento;
+      element.tipoAutor=producto.tipoAutor;
+      element.asociado=producto.asociado;
+    }
+  })
+
+  // convierte a string el arreglo de objetos javascript
+  const productosJSON = JSON.stringify(productos);
+
+  fs.writeFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json', productosJSON,'utf-8');
+  
+  res.redirect('/paginaAlumno');
+});
+
+
+
+router.post('/modificarARevista',(req, res) =>{
+  let {titulo,nombre,tipo,indice,opcion,issn,doi,autor,tema,url} = req.body;
+  const tipoRevista = tipo;
+  const indiceOtro = opcion;
+  const ISSN = issn;
+  const DOI = doi
+  const tipoAutor = autor;
+  const asociado = tema;
+  const URL = url;
+
+  let producto = {
+    titulo,
+    nombre,
+    tipoRevista,
+    indice,
+    indiceOtro,
+    ISSN,
+    DOI,
+    tipoAutor,
+    asociado,
+    URL
+  };
+  
+  productos.ARevista.map(function(element){
+    if(element.titulo == producto.titulo){
+      element.nombre=producto.nombre;
+      element.tipoRevista=producto.tipoRevista;
+      element.indice=producto.indice;
+      element.indiceOtro=producto.indiceOtro;
+      element.ISSN=producto.ISSN;
+      element.DOI=producto.DOI;
+      element.tipoAutor=producto.tipoAutor;
+      element.asociado=producto.asociado;
+      element.URL=producto.URL;
+    }
+  })
+
+  // convierte a string el arreglo de objetos javascript
+  const productosJSON = JSON.stringify(productos);
+
+  fs.writeFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json', productosJSON,'utf-8');
+
+  res.redirect('/paginaAlumno');
+});
+
+
+
+router.post('/modificarCLibro',(req, res) =>{
+  let {titulo, editorial, edicion, año, isbn, autor, tema, url} = req.body;
+
+  const añoPublicacion = año;
+  const ISBN = isbn;
+  const tipoAutor = autor;
+  const asociado = tema;
+  const URL = url;
+
+  let producto = {
+    titulo,
+    editorial,
+    edicion,
+    añoPublicacion,
+    ISBN,
+    tipoAutor,
+    asociado,
+    URL
+  };
+
+  productos.CLibro.map(function(element){
+    if(element.titulo == producto.titulo){
+      element.editorial=producto.editorial;
+      element.edicion=producto.edicion;
+      element.añoPublicacion=producto.añoPublicacion;
+      element.ISBN=producto.ISBN;
+      element.tipoAutor=producto.tipoAutor;
+      element.asociado=producto.asociado;
+      element.URL=producto.URL;
+    }
+  })
+  // convierte a string el arreglo de objetos javascript
+  const productosJSON = JSON.stringify(productos);
+
+  fs.writeFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json', productosJSON,'utf-8');
+
+  res.redirect('/paginaAlumno');
+});
+
+
+router.post('/modificarlibro',(req, res) =>{
+  let {titulo, editorial, edicion, año, isbn, autor, tema, url} = req.body;
+
+  const añoPublicacion = año;
+  const ISBN = isbn;
+  const tipoAutor = autor;
+  const asociado = tema;
+  const URL = url;
+
+  let producto = {
+    titulo,
+    editorial,
+    edicion,
+    añoPublicacion,
+    ISBN,
+    tipoAutor,
+    asociado,
+    URL
+  };
+
+  productos.libro.map(function(element){
+    if(element.titulo == producto.titulo){
+      element.editorial=producto.editorial;
+      element.edicion=producto.edicion;
+      element.añoPublicacion=producto.añoPublicacion;
+      element.ISBN=producto.ISBN;
+      element.tipoAutor=producto.tipoAutor;
+      element.asociado=producto.asociado;
+      element.URL=producto.URL;
+    }
+  })
+  // convierte a string el arreglo de objetos javascript
+  const productosJSON = JSON.stringify(productos);
+
+  fs.writeFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json', productosJSON,'utf-8');
+
+  res.redirect('/paginaAlumno');
+});
+
+
+
+router.post('/modificarhardwareSoftware',(req, res) =>{
+  let {titulo, año, derechos, autor, tema, url} = req.body;
+
+  const añoDesarrollo = año;
+  const derechosAutor = derechos;
+  const tipoAutor = autor;
+  const asociado = tema;
+  const URL = url;
+
+  let producto = {
+    titulo,
+    añoDesarrollo,
+    derechosAutor,
+    tipoAutor,
+    asociado,
+    URL
+  };
+  productos.hardwareSoftware.map(function(element){
+    if(element.titulo == producto.titulo){
+      element.añoDesarrollo=producto.añoDesarrollo;
+      element.derechosAutor=producto.derechosAutor;
+      element.tipoAutor=producto.tipoAutor;
+      element.asociado=producto.asociado;
+      element.URL=producto.URL;
+    }
+  })
+  // convierte a string el arreglo de objetos javascript
+  const productosJSON = JSON.stringify(productos);
+
+  fs.writeFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json', productosJSON,'utf-8');
+
+  res.redirect('/paginaAlumno');
+});
+
+
+
+
 module.exports = router;
+

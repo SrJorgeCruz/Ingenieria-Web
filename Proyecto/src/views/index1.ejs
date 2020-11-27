@@ -48,7 +48,7 @@
   <div class="login-page">
     <div class="form">
 
-      <form id="rf" class="register-form" novalidate>
+      <form id="rf" class="register-form" method="POST" action="/modificarACongreso" novalidate>
         <div class="hijo1">
           <div class="titulo">  
             <nav><h1>Artículos de congreso</h1> </nav>
@@ -56,7 +56,7 @@
           
             <div class="datos, cajitaDato">
               <label class="control-label" for="titulo">Título del artículo*</label>
-              <input id="titulo" type="text" placeholder="titulo" name="titulo" value="<%=producto.titulo%>"/>
+              <input id="titulo" type="text" placeholder="titulo" readonly="readonly" name="titulo" value="<%=producto.titulo%>"/>
               <div class="messages"></div>
             </div>
             <div class="datos, cajitaDato">
@@ -79,13 +79,13 @@
             <div class="datos, cajitaDato">
               <label class="control-label" for="autor">Seleccione una opción</label>
               <select name="autor">
-                <option value="1"><%=producto.tipoAutor%> </option>
+                <option value="<%=producto.tipoAutor%>"><%=producto.tipoAutor%> </option>
                 
                 <%if(producto.tipoAutor == 'Coautor'){%>
-                  <option value="2"> Autor Principal</option>
+                  <option value="Autor Principal"> Autor Principal</option>
                   <%}else{%>
                     
-                    <option value="2"> Coautor</option>
+                    <option value="Coautor"> Coautor</option>
                   <%}%>
               
               </select>
@@ -96,13 +96,13 @@
         
                 <label class="control-label" for="tema" >¿Esta asociado a tu tema de tesis?*</label>
                 <select id="tema" name="tema">
-                  <option value="1"><%=producto.asociado%> </option>
+                  <option value="<%=producto.asociado%>"><%=producto.asociado%> </option>
                 
                 <%if(producto.asociado == 'No'){%>
-                  <option value="2"> Si</option>
+                  <option value="Si"> Si</option>
                   <%}else{%>
                     
-                    <option value="2"> No</option>
+                    <option value="No"> No</option>
                   <%}%>
                   
                 </select>
@@ -111,7 +111,7 @@
           </div>
 
           <div class="">
-            <button type="submit" id="boton1">Guardar</button>
+            <button type="submit" id="boton1">Actualizar</button>
           </div>
       </form>
     </div>
