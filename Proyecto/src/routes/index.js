@@ -233,10 +233,10 @@ router.post('/guardarlibro',(req, res) =>{
 });
 
 router.post('/guardarhardwareSoftware',(req, res) =>{
-  let {titulo, año, derecho, autor, tema, url} = req.body;
+  let {titulo, año, derechos, autor, tema, url} = req.body;
 
   const añoDesarrollo = año;
-  const derechosAutor = derecho;
+  const derechosAutor = derechos;
   const tipoAutor = autor;
   const asociado = tema;
   const URL = url;
