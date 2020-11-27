@@ -75,11 +75,10 @@
               <input name="edicion" type="text" placeholder="Edición"  value="<%=producto.edicion%>" />
               <div class="messages"></div>
             </div>
-              
             <div class="datos, cajitaDato">
               <label class="control-label" for="año">Año de publicación*</label>
-              <select name ="año"type="text"  value="<%=producto.añoPublicacion%>" >
-                <option value="0">Seleccione</option>
+              <select name ="año"type="text" >
+                <option value="0"><%=producto.añoPublicacion%></option>
                 <option value="1">2020</option>
                 <option value="2">2019</option>
                 <option value="3">2018</option>
@@ -124,34 +123,49 @@
               </select>
               <div class="messages"></div>
             </div>
-                
+          
             <div class="datos, cajitaDato">
               <label class="control-label" for="isbn">ISBN del libro*</label>
               <input name="isbn"type="text" placeholder="ISBN"  value="<%=producto.ISBN%>" />
               <div class="messages"></div>
             </div>
     
-            <div class="datos, cajitaDato">
-              <label class="control-label" for="autor">elige una opción</label>
-              <select name="autor"   value="<%=producto.tipoAutor%>">
-                <option value="0">Seleccione una opcion</option>
-                <option value="1">Autor Principal</option>
-                <option value="2">Coautor</option>
-              </select>
-              <div class="messages"></div>
-            </div>
-
-            <div class="datos, cajitaDato">        
-              <label class="control-label" for="tema">¿Esta asociado a tu tema de tesis?*</label>
-              <select name="tema"   value="<%=producto.asociado%>">
-                <option value="0">Seleccione una opción</option>
-                <option value="1">Si</option>
-                <option value="2">No</option>
-              </select>
-              <div class="messages"></div>
-            </div>
             
             <div class="datos, cajitaDato">
+              <label class="control-label" for="autor">Seleccione una opción</label>
+              <select name="autor">
+                <option value="1"><%=producto.tipoAutor%> </option>
+                
+                <%if(producto.tipoAutor == 'Coautor'){%>
+                  <option value="2"> Autor Principal</option>
+                  <%}else{%>
+                    
+                    <option value="2"> Coautor</option>
+                  <%}%>
+              
+              </select>
+              <div class="messages"></div>
+            </div>
+  
+
+
+            <div class="datos, cajitaDato">
+              <label class="control-label" for="tema">¿Esta asociado a tu tema de tesis?*</label>
+              <select name="tema"  >
+                <option value="1"><%=producto.asociado%> </option>
+                
+                <%if(producto.asociado == 'No'){%>
+                  <option value="2"> Si</option>
+                  <%}else{%>
+                    
+                    <option value="2"> No</option>
+                  <%}%>
+                  
+              </select>
+              <div class="messages"></div>
+              </div>
+
+              <div class="datos, cajitaDato">
               <label class="control-label" for="url">URL del repositorio donde consultar*</label>
               <input name ="url"type="text" placeholder="URL del repositorio donde consultar"  value="<%=producto.URL%>" />
               <div class="messages"></div>

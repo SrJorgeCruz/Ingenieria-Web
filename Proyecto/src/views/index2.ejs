@@ -138,10 +138,20 @@
           <div class="datos, cajitaDato">
             <label class="control-label" for="indice">Índice de la revista*</label>
             <select  id="id_opcion" name="indice"  onchange="carg(this);"  value="<%=producto.indice%>">
-              <option value="0">Seleccione una opcion</option>
-              <option value="1">JCR</option>
-              <option value="2">CONACYT</option>
-              <option value="3">Otro</option> 
+              <option value="1"><%=producto.indice%> </option>
+                
+              <%if(producto.indice == 'JRC'){%>
+                <option value="2"> CONACYT</option>
+                <option value="3"> Otro</option>
+                <%}else if(producto.indice == 'CONACYT'){%>
+                  
+                  <option value="2"> JCR</option>
+                  <option value="3"> Otro</option>
+                <%}else {%>
+                  <option value="2"> JCR</option>
+                  <option value="3"> CONACYT</option>
+                  
+                <%}%>
             </select>
             <div class="messages"></div>
           </div>
