@@ -142,4 +142,121 @@ router.post('/guardarACongreso',(req, res) =>{
   res.redirect('/paginaAlumno');
 });
 
+router.post('/guardarARevista',(req, res) =>{
+  let {titulo,nombre,tipo,indice,opcion,issn,doi,autor,tema,url} = req.body;
+  const tipoRevista = tipo;
+  const indiceOtro = opcion;
+  const ISSN = issn;
+  const DOI = doi
+  const tipoAutor = autor;
+  const asociado = tema;
+  const URL = url;
+
+  let producto = {
+    titulo,
+    nombre,
+    tipoRevista,
+    indice,
+    indiceOtro,
+    ISSN,
+    DOI,
+    tipoAutor,
+    asociado,
+    URL
+  };
+  productos.ARevista.push(producto);
+
+  // convierte a string el arreglo de objetos javascript
+  const productosJSON = JSON.stringify(productos);
+
+  fs.writeFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json', productosJSON,'utf-8');
+
+  res.redirect('/paginaAlumno');
+});
+
+router.post('/guardarCLibro',(req, res) =>{
+  let {titulo, editorial, edicion, año, isbn, autor, tema, url} = req.body;
+
+  const añoPublicacion = año;
+  const ISBN = isbn;
+  const tipoAutor = autor;
+  const asociado = tema;
+  const URL = url;
+
+  let producto = {
+    titulo,
+    editorial,
+    edicion,
+    añoPublicacion,
+    ISBN,
+    tipoAutor,
+    asociado,
+    URL
+  };
+  productos.CLibro.push(producto);
+
+  // convierte a string el arreglo de objetos javascript
+  const productosJSON = JSON.stringify(productos);
+
+  fs.writeFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json', productosJSON,'utf-8');
+
+  res.redirect('/paginaAlumno');
+});
+
+router.post('/guardarlibro',(req, res) =>{
+  let {titulo, editorial, edicion, año, isbn, autor, tema, url} = req.body;
+
+  const añoPublicacion = año;
+  const ISBN = isbn;
+  const tipoAutor = autor;
+  const asociado = tema;
+  const URL = url;
+
+  let producto = {
+    titulo,
+    editorial,
+    edicion,
+    añoPublicacion,
+    ISBN,
+    tipoAutor,
+    asociado,
+    URL
+  };
+  productos.libro.push(producto);
+
+  // convierte a string el arreglo de objetos javascript
+  const productosJSON = JSON.stringify(productos);
+
+  fs.writeFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json', productosJSON,'utf-8');
+
+  res.redirect('/paginaAlumno');
+});
+
+router.post('/guardarlibro',(req, res) =>{
+  let {titulo, año, derecho, autor, tema, url} = req.body;
+
+  const añoDesarrollo = año;
+  const dechosAutor = derecho;
+  const tipoAutor = autor;
+  const asociado = tema;
+  const URL = url;
+
+  let producto = {
+    titulo,
+    año,
+    derecho,
+    autor,
+    tema,
+    url
+  };
+  productos.hardwareSoftware.push(producto);
+
+  // convierte a string el arreglo de objetos javascript
+  const productosJSON = JSON.stringify(productos);
+
+  fs.writeFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json', productosJSON,'utf-8');
+
+  res.redirect('/paginaAlumno');
+});
+
 module.exports = router;
