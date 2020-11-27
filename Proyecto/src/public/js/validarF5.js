@@ -78,8 +78,8 @@ document.addEventListener("DOMContentLoaded",function() {
 
     // Hook up the form so we can prevent it from being posted
     var form = document.querySelector("form#ef");
-    form.addEventListener("submit", function(ev) {
-      ev.preventDefault();
+    var button = document.getElementById("boton5");
+    button.addEventListener("click", function(ev) {
       handleFormSubmit(form);
     });
 
