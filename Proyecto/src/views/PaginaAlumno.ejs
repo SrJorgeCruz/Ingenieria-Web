@@ -138,7 +138,7 @@
                     <div id="pnl_1">
                       <div id="datos-pnl_1">
                         <% productos.ACongreso.forEach(function(producto){ %> 
-                            <a href="/index1/<%=productos.titulo%>">
+                            <a href="/index1/<%= producto.titulo%>">
                                 <h2><%=producto.titulo%></h2>
                                 <p>Nombre del congreso: <%=producto.nombre%></p>
                                 <p>Fecha del evento: <%=producto.fechaEvento%></p>
