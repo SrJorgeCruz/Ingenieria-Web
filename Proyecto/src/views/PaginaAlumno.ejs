@@ -153,7 +153,7 @@
                     <div id="pnl_2">
                       <div id="datos-pnl_2">
                             <% productos.ARevista.forEach(function(producto){ %>
-                                <a href="/index2">
+                                <a href="/index2/<%= producto.titulo%>">
                                     <h2><%=producto.titulo%></h2>
                                     <p>Nombre de la revista: <%=producto.nombre%></p>
                                     <p>Tipo de revista: <%=producto.tipoRevista%></p>
@@ -176,7 +176,7 @@
                     <div id="pnl_3">
                         <div id="datos-pnl_3">
                                 <% productos.CLibro.forEach(function(producto){ %>
-                                    <a href="/index3">
+                                    <a href="/index3/<%= producto.titulo%>">
                                         <h2><%=producto.titulo%></h2>
                                         <p>Editorial del libro: <%=producto.editorial%></p>
                                         <p>Edicion del libro: <%=producto.edicion%></p>
@@ -194,7 +194,7 @@
                     <div id="pnl_4">
                         <div id="datos-pnl_4">
                                 <% productos.libro.forEach(function(producto){ %>   
-                                    <a href="/index4">
+                                    <a href="/index4/<%= producto.titulo%>">
                                         <h2><%=producto.titulo%></h2>
                                         <p>Editorial del libro: <%=producto.editorial%></p>
                                         <p>Edicion del libro: <%=producto.edicion%></p>
@@ -212,7 +212,7 @@
                     <div id="pnl_5">
                         <div id="datos-pnl_5">
                             <% productos.hardwareSoftware.forEach(function(producto){ %>
-                                <a href="/index5">
+                                <a href="/index5/<%= producto.titulo%>">
                                     <h2><%=producto.titulo%></h2>
                                     <p>Año de desarollo: <%=producto.añoDesarrollo%></p>
                                     <p>Derechos de autor: <%=producto.derechosAutor%></p>

@@ -35,393 +35,10 @@
 
 </header>
 
-<nav class="barra-navegacion">
-  <div>
-      <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Conocenos</a></li>
-          <li><a href="#">Investigacion</a></li>
-      </ul>
-  </div>
-</nav>
 
   <div class="login-page">
     <div class="form">
 
-      <form id="rf" class="login-form" novalidate>
-        <div class="hijo1">
-          <div class="titulo">  
-            <nav><h1>Artículos de congreso</h1> </nav>
-          </div>
-          
-            <div class="datos, cajitaDato">
-              <label class="control-label" for="titulo">Título del artículo*</label>
-            <!--  <textarea name="titulo" id="titulo" required>Titulo</textarea>-->
-              <input id="titulo" type="text" placeholder="titulo" name="titulo" required />
-              <div class="messages"></div>
-            </div>
-            <div class="datos, cajitaDato">
-              <label class="control-label" for="nombre">Nombre del congreso*</label>
-             <!-- <textarea name="nombre" id="nombre" cols="30" rows="3" placeholder="nombre" required></textarea>-->
-              <input id="nombre" type="text" placeholder="nombre" name="nombre"required />
-              <div class="messages"></div>
-            </div>
-        
-        
-            <div class="datos, cajitaDato">
-              <label class="control-label"for="fecha">Fecha del evento*</label>
-              <input id="fecha" type="date" placeholder="fecha" name="fecha"required />
-              <div class="messages"></div>
-              </div>
-        
-
-        
-              <div class="datos, cajitaDato">
-        
-                <label class="control-label" for="autor">Seleccione un campo</label>
-                <select id="autor" name="autor"  required>
-                  <option value="0">Seleccione una opción</option>
-                  <option value="1">Autor Principal</option>
-                  <option value="2">Coautor</option>
-           
-                </select>
-                <div class="messages"></div>
-              </div>
-
-              <div class="datos, cajitaDato">
-        
-                <label class="control-label" for="tema" >¿Esta asociado a tu tema de tesis?*</label>
-                <select id="tema" name="tema"  required>
-                  <option value="0">Seleccione una opción</option>
-                  <option value="1">Si</option>
-                  <option value="2">No</option>
-           
-                </select>
-                <div class="messages"></div>
-              </div>
-          </div>
-
-          <div class="">
-            <button type="submit">Guardar</button>
-          </div>
-      </form>
-      
-      <form id="lf" class="login-form" novalidate>
-        <div class="hijo1">
-          <div class="titulo">  
-          <nav><h1>Artículos de Revistas</h1> 
-          </nav>
-          </div>
-
-          <div class="datos, cajitaDato">
-            <label class="control-label" for="titulo">Título del artículo*</label>
-            <input name="titulo" type="text" placeholder="Título del artículo" required />
-            <div class="messages"></div>
-          </div>
-
-          <div class="datos, cajitaDato">
-            <label class="control-label" for="nombre">Nombre de la revista*</label>
-            <input name="nombre"type="text" placeholder="Nombre de la revista" required />
-            <div class="messages"></div>
-          </div>
-
-          <div class="datos, cajitaDato">
-            <label class="control-label" for="tipo">Tipo de revista*</label>
-            <select name="tipo"   required>
-              <option value="0">Seleccione una opción</option>
-              <option value="1">arbitrada</option>
-              <option value="2">no arbitrada</option>
-            </select>
-            <div class="messages"></div>
-          </div>
-
-          <div class="datos, cajitaDato">
-            <label class="control-label" for="indice">Índice de la revista*</label>
-            <select  id="id_opcion" name="indice"  onchange="carg(this);" required>
-              <option value="0">Seleccione una opcion</option>
-              <option value="1">JCR</option>
-              <option value="2">CONACYT</option>
-              <option value="3">Otro</option> 
-            </select>
-            <div class="messages"></div>
-          </div>
-
-          <div class="datos, cajitaDato">
-            <label class="control-label" for="opcion">  Indique el indice de la revista    </label>
-            <input id="otro"name="opcion" type="text" placeholder="Otro" disabled/>
-            <div class="messages"></div>
-          </div>
-          
-          <div class="datos, cajitaDato">
-            <label class="control-label" for="issn">ISSN de la revista*</label>
-            <input name="issn" type="text" placeholder="ISSN de la revista" required />
-            <div class="messages"></div>
-          </div>
-
-          <div class="datos, cajitaDato">
-            <label class="control-label" for="doi" >DOI de la revista*</label>
-            <input name="doi"type="text" placeholder="DOI de la revista" required />
-            <div class="messages"></div>
-          </div>
- 
-          <div class="datos, cajitaDato">
-            <label class="control-label" for="autor">Seleccione una opción</label>
-            <select name="autor" required>
-              <option value="0">Seleccione una opción</option>
-              <option value="1">Autor Principal</option>
-              <option value="2">Coautor</option>
-            </select>
-            <div class="messages"></div>
-          </div>
-  
-          <div class="datos, cajitaDato">
-            <label class="control-label" for="tema">¿Esta asociado a tu tema de tesis?*</label>
-            <select name="tema" required>
-              <option value="0">Seleccione una opcion</option>
-              <option value="1">Si</option>
-              <option value="2">No</option>
-            </select>
-            <div class="messages"></div>
-          </div>
-          <div class="datos, cajitaDato">
-            <label class="control-label" for="url">URL del repositorio donde consultar*</label>
-            <input name="url" type="url" placeholder="URL del repositorio donde consultar" required />
-            <div class="messages"></div>
-          </div>
-        </div>  
-          <div class="">
-            <button type="submit">Guardar</button>
-          </div>
-      </form>
-      
-      <form id="cf" class="login-form" novalidate>
-        <div class="hijo1">
-          <!--<div class="hijo1">-->
-            <div class="titulo">  
-              <nav><h1>Capítulo de libro</h1> 
-              </nav>
-            </div>
-    
-            <div class="datos, cajitaDato">
-              <label class="control-label" for="titulo">Título del libro*</label>
-              <input type="text" placeholder="Título del libro" name="titulo" required />
-              <div class="messages"></div>
-            </div>
-
-            <div class="datos, cajitaDato">
-              <label class="control-label" for="editorial">Editorial del libro*</label>
-              <input type="text" placeholder="Editorial" name ="editorial"required />
-              <div class="messages"></div>
-            </div>
-              
-            <div class="datos, cajitaDato">
-              <label class="control-label" for="edicion">Edición del libro*</label>
-              <input type="text" placeholder="Edición" name="edicion"required />
-              <div class="messages"></div>
-            </div>
-              
-            <div class="datos, cajitaDato">
-              <label class="control-label" for="año">Año de publicación*</label>
-              <select name ="año"type="text" required >
-                <option value="0">Seleccione</option>
-                <option value="1">2020</option>
-                <option value="2">2019</option>
-                <option value="3">2018</option>
-                <option value="4">2017</option>
-                <option value="5">2016</option>
-                <option value="6">2015</option>
-                <option value="7">2014</option>
-                <option value="8">2013</option>
-                <option value="9">2012</option>
-                <option value="10">2011</option>
-                <option value="11">2010</option>
-                <option value="12">2009</option>
-                <option value="13">2008</option>
-                <option value="14">2007</option>
-                <option value="15">2006</option>
-                <option value="16">2005</option>
-                <option value="17">2004</option>
-                <option value="18">2003</option>
-                <option value="19">2002</option>
-                <option value="20">2001</option>
-                <option value="21">2000</option>
-                <option value="22">1999</option>
-                <option value="23">1998</option>
-                <option value="24">1997</option>
-                <option value="25">1996</option>
-                <option value="26">1995</option>
-                <option value="27">1994</option>
-                <option value="28">1993</option>
-                <option value="29">1992</option>
-                <option value="30">1991</option>
-                <option value="31">1990</option>
-                <option value="32">1989</option>
-                <option value="33">1988</option>
-                <option value="34">1987</option>
-                <option value="35">1986</option>
-                <option value="36">1985</option>
-                <option value="37">1984</option>
-                <option value="38">1983</option>
-                <option value="39">1982</option>
-                <option value="40">1981</option>
-                <option value="41">1980</option>
-              </select>
-              <div class="messages"></div>
-            </div>
-          
-            <div class="datos, cajitaDato">
-              <label class="control-label" for="isbn">ISBN del libro*</label>
-              <input type="text" placeholder="ISBN" name="isbn"required />
-              <div class="messages"></div>
-            </div>
-              
-            <div class="datos, cajitaDato">
-              <label class="control-label" for="autor">elige una opción</label>
-              <select   name="autor"required>
-                <option value="0">Seleccione una opción</option>
-                <option value="1">Autor Principal</option>
-                <option value="2">Coautor</option>
-              </select>
-              <div class="messages"></div>
-            </div>
-
-            <div class="datos, cajitaDato">        
-              <label class="control-label" for="tema">¿Esta asociado a tu tema de tesis?*</label>
-              <select  name="tema" required>
-                <option value="0">Seleccione una opción</option>
-                <option value="1">Si</option>
-                <option value="2">No</option>           
-              </select>
-              <div class="messages"></div>
-            </div>
-
-            <div class="datos, cajitaDato">
-              <label class="control-label" for="url" >URL del repositorio donde consultar*</label>
-              <input type="text" placeholder="URL del repositorio donde consultar" name="url"required />
-              <div class="messages"></div>
-            </div>
-    
-          </div>
-            <div class="">
-            <button type="submit">Guardar</button>
-            </div>
-      </form>
-      
-      <form id="df" class="login-form" novalidate>
-        <div class="hijo1">
-          <!--<div class="hijo1">-->
-
-            <div class="titulo">  
-              <nav><h1>Libro</h1> 
-              </nav>
-            </div>
-    
-            <div class="datos, cajitaDato">
-              <label class="control-label" for="titulo">Título del libro*</label>
-              <input name="titulo"type="text" placeholder="Título del libro" required />
-              <div class="messages"></div>
-            </div>
-            
-            <div class="datos, cajitaDato">
-              <label class="control-label" for="editorial">Editorial del libro*</label>
-              <input name="editorial"type="text" placeholder="Editorial" required />
-              <div class="messages"></div>
-            </div>
-
-            <div class="datos, cajitaDato">
-              <label class="control-label" for="edicion">Edición de libro*</label>
-              <input name="edicion" type="text" placeholder="Edición" required />
-              <div class="messages"></div>
-            </div>
-              
-            <div class="datos, cajitaDato">
-              <label class="control-label" for="año">Año de publicación*</label>
-              <select name ="año"type="text" required >
-                <option value="0">Seleccione</option>
-                <option value="1">2020</option>
-                <option value="2">2019</option>
-                <option value="3">2018</option>
-                <option value="4">2017</option>
-                <option value="5">2016</option>
-                <option value="6">2015</option>
-                <option value="7">2014</option>
-                <option value="8">2013</option>
-                <option value="9">2012</option>
-                <option value="10">2011</option>
-                <option value="11">2010</option>
-                <option value="12">2009</option>
-                <option value="13">2008</option>
-                <option value="14">2007</option>
-                <option value="15">2006</option>
-                <option value="16">2005</option>
-                <option value="17">2004</option>
-                <option value="18">2003</option>
-                <option value="19">2002</option>
-                <option value="20">2001</option>
-                <option value="21">2000</option>
-                <option value="22">1999</option>
-                <option value="23">1998</option>
-                <option value="24">1997</option>
-                <option value="25">1996</option>
-                <option value="26">1995</option>
-                <option value="27">1994</option>
-                <option value="28">1993</option>
-                <option value="29">1992</option>
-                <option value="30">1991</option>
-                <option value="31">1990</option>
-                <option value="32">1989</option>
-                <option value="33">1988</option>
-                <option value="34">1987</option>
-                <option value="35">1986</option>
-                <option value="36">1985</option>
-                <option value="37">1984</option>
-                <option value="38">1983</option>
-                <option value="39">1982</option>
-                <option value="40">1981</option>
-                <option value="41">1980</option>
-              </select>
-              <div class="messages"></div>
-            </div>
-                
-            <div class="datos, cajitaDato">
-              <label class="control-label" for="isbn">ISBN del libro*</label>
-              <input name="isbn"type="text" placeholder="ISBN" required />
-              <div class="messages"></div>
-            </div>
-    
-            <div class="datos, cajitaDato">
-              <label class="control-label" for="autor">elige una opción</label>
-              <select name="autor"  required>
-                <option value="0">Seleccione una opcion</option>
-                <option value="1">Autor Principal</option>
-                <option value="2">Coautor</option>
-              </select>
-              <div class="messages"></div>
-            </div>
-
-            <div class="datos, cajitaDato">        
-              <label class="control-label" for="tema">¿Esta asociado a tu tema de tesis?*</label>
-              <select name="tema"  required>
-                <option value="0">Seleccione una opción</option>
-                <option value="1">Si</option>
-                <option value="2">No</option>
-              </select>
-              <div class="messages"></div>
-            </div>
-            
-            <div class="datos, cajitaDato">
-              <label class="control-label" for="url">URL del repositorio donde consultar*</label>
-              <input name ="url"type="text" placeholder="URL del repositorio donde consultar" required />
-              <div class="messages"></div>
-            </div>
-          </div>  
-            <div class="">
-              <button type="submit">guardar</button>
-            </div>
-
-
-      </form>
- 
       <form id="ef" class="register-form" novalidate>
         <div class="hijo1">
           <!--<div class="hijo1">-->
@@ -433,13 +50,13 @@
             
             <div class="datos, cajitaDato">
               <label class="control-label" for="titulo">Título de Hardware o Sofware</label>
-              <input name="titulo"type="text" placeholder="Título" required />
+              <input name="titulo"type="text" placeholder="Título"  value="<%=producto.titulo%>" />
               <div class="messages"></div>
             </div>
             
             <div class="datos, cajitaDato">
               <label class="control-label" for="año" >Año de desarollo*</label>
-              <select name ="año"type="text" required >
+              <select name ="año"type="text"  value="<%=producto.añoDesarrollo%>" >
                 <option value="0">Seleccione</option>
                 <option value="1">2020</option>
                 <option value="2">2019</option>
@@ -488,13 +105,13 @@
               
             <div class="datos, cajitaDato">
               <label class="control-label" for="derechos">Derechos de autor*</label>
-              <input name="derechos"type="text" placeholder="Derechos de autor" required />
+              <input name="derechos"type="text" placeholder="Derechos de autor"  value="<%=producto.derechosAutor%>" />
               <div class="messages"></div>
             </div>
               
             <div class="datos, cajitaDato">
               <label class="control-label" for="autor">Seleccione una opción</label>
-              <select name="autor"  required>
+              <select name="autor"   value="<%=producto.asociado%>">
                 <option value="0">Seleccone una opción</option>
                 <option value="1">Autor Principal</option>
                 <option value="2">Coautor</option>
@@ -504,7 +121,7 @@
   
             <div class="datos, cajitaDato">
               <label class="control-label" for="tema">¿Esta asociado a tu tema de tesis?*</label>
-              <select name="tema"   required>
+              <select name="tema"  value="<%=producto.asociado%>">
                 <option value="0">Seleccione una opción</option>
                 <option value="1">Si</option>
                 <option value="2">No</option>
@@ -514,7 +131,7 @@
 
             <div class="datos, cajitaDato">
               <label class="control-label" for="url">URL del repositorio donde consultar*</label>
-              <input name="url" type="text" placeholder="URL del repositorio donde consultar" required />
+              <input name="url" type="text" placeholder="URL del repositorio donde consultar"  value="<%=producto.URL%>" />
               <div class="messages"></div>
             </div>
 
