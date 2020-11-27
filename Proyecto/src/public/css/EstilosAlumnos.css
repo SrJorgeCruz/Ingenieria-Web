@@ -78,7 +78,7 @@ span.diana {
     text-transform: uppercase;
     outline: 0;
     background:rgba(104, 36, 68, 0.90);
-    width: 100%;
+    width: auto;
     border: 0;
     padding: 15px;
     color: #FFFFFF;

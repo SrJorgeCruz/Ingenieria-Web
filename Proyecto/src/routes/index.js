@@ -26,6 +26,12 @@ router.get('/nuevosProductos',(req, res)=>{
     res.render('index');
 });
 
+router.get('/src/Estudiantes/Productividad/:curp',(req, res)=>{
+  const usuarioJSONr = fs.readFileSync('src/Estudiantes/Productividad/'+req.params.curp,'utf-8');
+  const usuario = JSON.parse(usuarioJSONr);  
+  res.json(usuario)
+});
+
 
 
 module.exports = router;

@@ -3,15 +3,15 @@ const selectAlumnos = document.getElementById("selectAlumnos");
 selectAlumnos.addEventListener("change", function(ev){
     
     const requestURL2 = '/src/Estudiantes/Productividad/'+selectAlumnos.value+'.json';
-
+    console.log(requestURL2)
     const request2 = new XMLHttpRequest();
     request2.open('GET', requestURL2);
     request2.responseType = 'json';
     request2.send();
-
     request2.onload = function() {
         
         const productividad = request2.response;
+        console.log(productividad)
         borradoDatos();
         llenadoProductividad(productividad);
     }
@@ -76,7 +76,7 @@ function llenadoProductividad(jsonObj){
     const ARevista = jsonObj['ARevista'];
     const CLibro = jsonObj['CLibro'];
     const libro = jsonObj['libro'];
-    const h_s = jsonObj['hardware/software'];
+    const h_s = jsonObj['hardwareSoftware'];
 
 
     for (var i = 0; i < ACongreso.length; i++) {
