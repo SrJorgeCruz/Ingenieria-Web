@@ -118,5 +118,28 @@ router.get('/index5/:titulo',(req, res)=>{
   res.render('index5',{producto});
 });
 
+router.post('/guardarACongreso',(req, res) =>{
+  let {titulo,nombre,fecha,autor,tema} = req.body;
+
+  const fechaEvento = fecha;
+  const tipoAutor = autor;
+  const asociado = tema;
+
+  let producto = {
+    titulo,
+    nombre,
+    fechaEvento, 
+    tipoAutor,
+    asociado
+  };
+  productos.ACongreso.push(producto);
+
+  // convierte a string el arreglo de objetos javascript
+  const productosJSON = JSON.stringify(productos);
+
+  fs.writeFileSync('src/Estudiantes/Productividad/GOJD001207HMCNMNA7.json', productosJSON,'utf-8');
+
+  res.redirect('/paginaAlumno');
+});
 
 module.exports = router;
