@@ -164,13 +164,13 @@ function llenadoProductividad(jsonObj){
         const myPara7 = document.createElement('p');
     
         myH2.textContent = CLibro[i].titulo;
-        myPara1.textContent = 'Nombre del congreso: ' + CLibro[i].editorial;
-        myPara2.textContent = 'Fecha del evento: ' + CLibro[i].edicion;
-        myPara3.textContent = 'Tipo de Autor: ' + CLibro[i].añoPublicacion;
-        myPara4.textContent = 'Asociado al tema de tesis: ' + CLibro[i].ISBN;
-        myPara5.textContent = 'Fecha del evento: ' + CLibro[i].tipoAutor;
-        myPara6.textContent = 'Tipo de autor: ' + CLibro[i].asociado;
-        myPara7.textContent = 'Asociado al tema de tesis: ' + CLibro[i].URL;
+        myPara1.textContent = 'Editorial: ' + CLibro[i].editorial;
+        myPara2.textContent = 'Edición: ' + CLibro[i].edicion;
+        myPara3.textContent = 'Año publicación: ' + CLibro[i].añoPublicacion;
+        myPara4.textContent = 'ISBN: ' + CLibro[i].ISBN;
+        myPara5.textContent = 'Tipo de autor: ' + CLibro[i].tipoAutor;
+        myPara6.textContent = 'Asociado al tema de tesis: ' + CLibro[i].asociado;
+        myPara7.textContent = 'URL: ' + CLibro[i].URL;
 
     
         myArticle.appendChild(myH2);
@@ -200,13 +200,13 @@ function llenadoProductividad(jsonObj){
         const myPara7 = document.createElement('p');
     
         myH2.textContent = libro[i].titulo;
-        myPara1.textContent = 'Nombre del congreso: ' + libro[i].editorial;
-        myPara2.textContent = 'Fecha del evento: ' + libro[i].edicion;
-        myPara3.textContent = 'Tipo de Autor: ' + libro[i].añoPublicacion;
-        myPara4.textContent = 'Asociado al tema de tesis: ' + libro[i].ISBN;
-        myPara5.textContent = 'Fecha del evento: ' + libro[i].tipoAutor;
-        myPara6.textContent = 'Tipo de autor: ' + libro[i].asociado;
-        myPara7.textContent = 'Asociado al tema de tesis: ' + libro[i].URL;
+        myPara1.textContent = 'Editorial: ' + libro[i].editorial;
+        myPara2.textContent = 'Edicion: ' + libro[i].edicion;
+        myPara3.textContent = 'Año publicación: ' + libro[i].añoPublicacion;
+        myPara4.textContent = 'ISBN: ' + libro[i].ISBN;
+        myPara5.textContent = 'Tipo de autor: ' + libro[i].tipoAutor;
+        myPara6.textContent = 'Asociado al tema de tesis: ' + libro[i].asociado;
+        myPara7.textContent = 'URL: ' + libro[i].URL;
 
     
         myArticle.appendChild(myH2);
@@ -234,11 +234,11 @@ function llenadoProductividad(jsonObj){
         const myPara5 = document.createElement('p');
     
         myH2.textContent = h_s[i].titulo;
-        myPara1.textContent = 'Año de desarrollo: ' + h_s[i].editorial;
-        myPara2.textContent = 'Derechos de autor: ' + h_s[i].edicion;
-        myPara3.textContent = 'Tipo de autor: ' + h_s[i].añoPublicacion;
-        myPara4.textContent = 'Asociado al tema de tesis: ' + h_s[i].ISBN;
-        myPara5.textContent = 'URL: ' + h_s[i].tipoAutor;
+        myPara1.textContent = 'Año de desarrollo: ' + h_s[i].añoDesarrollo;
+        myPara2.textContent = 'Derechos de autor: ' + h_s[i].derechosAutor;
+        myPara3.textContent = 'Tipo de autor: ' + h_s[i].tipoAutor;
+        myPara4.textContent = 'Asociado al tema de tesis: ' + h_s[i].asociado;
+        myPara5.textContent = 'URL: ' + h_s[i].URL;
 
     
         myArticle.appendChild(myH2);
