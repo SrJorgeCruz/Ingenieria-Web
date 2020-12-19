@@ -88,19 +88,21 @@ function llenadoProductividad(jsonObj){
         const myPara2 = document.createElement('p');
         const myPara3 = document.createElement('p');
         const myPara4 = document.createElement('p');
-    
+        const myPara5 = document.createElement('p');
+
         myH2.textContent = ACongreso[i].titulo;
         myPara1.textContent = 'Nombre del congreso: ' + ACongreso[i].nombre;
         myPara2.textContent = 'Fecha del evento: ' + ACongreso[i].fechaEvento;
         myPara3.textContent = 'Tipo de autor: ' + ACongreso[i].tipoAutor;
         myPara4.textContent = 'Asociado al tema de tesis: ' + ACongreso[i].asociado;
-
+        myPara5.textContent = 'url ' + ACongreso[i].URL;
     
         myArticle.appendChild(myH2);
         myArticle.appendChild(myPara1);
         myArticle.appendChild(myPara2);
         myArticle.appendChild(myPara3);
         myArticle.appendChild(myPara4);
+        myArticle.appendChild(myPara5);
         myArticle.appendChild(document.createElement('hr'));
     
         pnl.appendChild(myArticle);

@@ -119,18 +119,20 @@ router.get('/index5/:titulo',(req, res)=>{
 });
 
 router.post('/guardarACongreso',(req, res) =>{
-  let {titulo,nombre,fecha,autor,tema} = req.body;
+  let {titulo,nombre,fecha,autor,tema,url} = req.body;
 
   const fechaEvento = fecha;
   const tipoAutor = autor;
   const asociado = tema;
+  const URL = url;
 
   let producto = {
     titulo,
     nombre,
     fechaEvento, 
     tipoAutor,
-    asociado
+    asociado,
+    URL
   };
   productos.ACongreso.push(producto);
 
@@ -261,18 +263,19 @@ router.post('/guardarhardwareSoftware',(req, res) =>{
 
 
 router.post('/modificarACongreso',(req, res) =>{
-  let {titulo,nombre,fecha,autor,tema} = req.body;
+  let {titulo,nombre,fecha,autor,tema,url} = req.body;
 
   const fechaEvento = fecha;
   const tipoAutor = autor;
   const asociado = tema;
-
+  const URL = url;
   let producto = {
     titulo,
     nombre,
     fechaEvento, 
     tipoAutor,
-    asociado
+    asociado,
+    URL
   };
 
   productos.ACongreso.map(function(element){
@@ -281,6 +284,7 @@ router.post('/modificarACongreso',(req, res) =>{
       element.fechaEvento=producto.fechaEvento;
       element.tipoAutor=producto.tipoAutor;
       element.asociado=producto.asociado;
+      element.URL=producto.URL;
     }
   })
 

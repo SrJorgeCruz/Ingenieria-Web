@@ -77,6 +77,8 @@
 
       <form id="rf" class="register-form" method="POST" action="/guardarACongreso" novalidate>
         <div class="hijo1">
+
+
           <div class="titulo">  
             <nav><h1>Artículos de congreso</h1> </nav>
           </div>
@@ -87,6 +89,7 @@
               <input id="titulo" type="text" placeholder="titulo" name="titulo" required />
               <div class="messages"></div>
             </div>
+
             <div class="datos, cajitaDato">
               <label class="control-label" for="nombre">Nombre del congreso*</label>
              <!-- <textarea name="nombre" id="nombre" cols="30" rows="3" placeholder="nombre" required></textarea>-->
@@ -94,15 +97,12 @@
               <div class="messages"></div>
             </div>
         
-        
             <div class="datos, cajitaDato">
               <label class="control-label"for="fecha">Fecha del evento*</label>
               <input id="fecha" type="date" placeholder="fecha" name="fecha"required />
               <div class="messages"></div>
               </div>
-        
-
-        
+  
               <div class="datos, cajitaDato">
         
                 <label class="control-label" for="autor">Seleccione un campo</label>
@@ -126,11 +126,20 @@
                 </select>
                 <div class="messages"></div>
               </div>
-          </div>
 
+              <div class="datos, cajitaDato">
+                <label class="control-label" for="url">URL del repositorio donde consultar*</label>
+                <input name="url" type="url" placeholder="URL del repositorio donde consultar"/>
+                <div class="messages"></div>
+              </div>
+        
+      
+        </div>  
           <div class="">
             <button type="submit" id="boton1">Guardar</button>
           </div>
+
+        
       </form>
       
       <form id="lf" class="login-form" method="POST" action="/guardarARevista" novalidate>
