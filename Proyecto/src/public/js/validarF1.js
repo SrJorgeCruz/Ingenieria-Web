@@ -58,18 +58,30 @@ document.addEventListener("DOMContentLoaded",function() {
           within: ["0"],
           message:"Obligatorio"
       }
+    },
+    url:
+    {
+        presence:
+        {
+            message:"Obligatorio"
+        },
+        url:{
+            message:"tiene que ser válida"
+        }
     }
     };
 
     // Hook up the form so we can prevent it from being posted
     var form = document.querySelector("form#rf");
-    var button = document.getElementById("boton1")
-    button.addEventListener("click", function(ev) {
-      handleFormSubmit(form);
+    form.addEventListener("submit", function(ev) {
+      let bandera=handleFormSubmit(form);
+      if(bandera != 1){
+        ev.preventDefault();
+      }
     });
 
     // Hook up the inputs to validate on the fly
-    var inputs = document.querySelectorAll(" input, textarea, select")
+    var inputs = form.querySelectorAll(" input, textarea, select")
     for (var i = 0; i < inputs.length; ++i) {
       inputs.item(i).addEventListener("change", function(ev) {
         var errors = validate(form, constraints) || {};
@@ -84,7 +96,9 @@ document.addEventListener("DOMContentLoaded",function() {
       showErrors(form, errors || {});
       if (!errors) {
         showSuccess();
+        return 1;
       }
+      return 0;
     }
 
     // Updates the inputs with the validation errors
@@ -152,7 +166,8 @@ document.addEventListener("DOMContentLoaded",function() {
     }
 
     function showSuccess() {
-      // We made it \:D/
+      // We made it \:D
+
       alert("Success!");
     }
   });

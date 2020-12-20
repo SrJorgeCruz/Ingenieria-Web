@@ -119,6 +119,9 @@ router.get('/index5/:titulo',(req, res)=>{
 });
 
 router.post('/guardarACongreso',(req, res) =>{
+  const formData = req.body
+  console.log('form data', formData);
+
   let {titulo,nombre,fecha,autor,tema,url} = req.body;
 
   const fechaEvento = fecha;
@@ -145,6 +148,10 @@ router.post('/guardarACongreso',(req, res) =>{
 });
 
 router.post('/guardarARevista',(req, res) =>{
+  const formData = req.body
+  console.log('form data', formData);
+
+
   let {titulo,nombre,tipo,indice,opcion,issn,doi,autor,tema,url} = req.body;
   const tipoRevista = tipo;
   const indiceOtro = opcion;
@@ -177,6 +184,9 @@ router.post('/guardarARevista',(req, res) =>{
 });
 
 router.post('/guardarCLibro',(req, res) =>{
+  const formData = req.body
+  console.log('form data', formData);
+
   let {titulo, editorial, edicion, año, isbn, autor, tema, url} = req.body;
 
   const añoPublicacion = año;
@@ -206,6 +216,9 @@ router.post('/guardarCLibro',(req, res) =>{
 });
 
 router.post('/guardarlibro',(req, res) =>{
+  const formData = req.body
+  console.log('form data', formData);
+
   let {titulo, editorial, edicion, año, isbn, autor, tema, url} = req.body;
 
   const añoPublicacion = año;
@@ -235,6 +248,9 @@ router.post('/guardarlibro',(req, res) =>{
 });
 
 router.post('/guardarhardwareSoftware',(req, res) =>{
+  const formData = req.body
+  console.log('form data', formData);
+
   let {titulo, año, derechos, autor, tema, url} = req.body;
 
   const añoDesarrollo = año;

@@ -78,13 +78,15 @@ document.addEventListener("DOMContentLoaded",function() {
 
     // Hook up the form so we can prevent it from being posted
     var form = document.querySelector("form#ef");
-    var button = document.getElementById("boton5");
-    button.addEventListener("click", function(ev) {
-      handleFormSubmit(form);
+    form.addEventListener("submit", function(ev) {
+      let bandera=handleFormSubmit(form);
+      if(bandera != 1){
+        ev.preventDefault();
+      }
     });
 
     // Hook up the inputs to validate on the fly
-    var inputs = document.querySelectorAll("input, textarea, select")
+    var inputs = form.querySelectorAll("input, textarea, select")
     for (var i = 0; i < inputs.length; ++i) {
       inputs.item(i).addEventListener("change", function(ev) {
         var errors = validate(form, constraints) || {};
@@ -99,7 +101,9 @@ document.addEventListener("DOMContentLoaded",function() {
       showErrors(form, errors || {});
       if (!errors) {
         showSuccess();
+        return 1;
       }
+      return 0;
     }
 
     // Updates the inputs with the validation errors

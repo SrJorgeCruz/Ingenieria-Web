@@ -50,7 +50,8 @@ document.addEventListener("DOMContentLoaded",function() {
             message:"Obligatorio"
         },
         format:{
-          pattern:"^(?=(?:\D*\d){10}(?:(?:\D*\d){3})?$)[\d-]+$",
+          pattern:"^(?:ISBN(?:-1[03])?:?●)?(?=[0-9X]{10}$|(?=(?:[0-9]+[-●]){3})[-●0-9X]{13}$|97[89][0-9]{10}$|(?=(?:[0-9]+[-●]){4})[-●0-9]{17}$)(?:97[89][-●]?)?[0-9]{1,5}[-●]?[0-9]+[-●]?[0-9]+[-●]?[0-9X]$",
+          //pattern:"^(?=(?:\D*\d){10}(?:(?:\D*\d){3})?$)[\d-]+$",
           message:"tiene que ser válido"
         }
     },
@@ -87,13 +88,15 @@ document.addEventListener("DOMContentLoaded",function() {
 
     // Hook up the form so we can prevent it from being posted
     var form = document.querySelector("form#cf");
-    var button = document.getElementById("boton3");
-    button.addEventListener("click", function(ev) {
-      handleFormSubmit(form);
+    form.addEventListener("submit", function(ev) {
+      let bandera=handleFormSubmit(form);
+      if(bandera != 1){
+        ev.preventDefault();
+      }
     });
 
     // Hook up the inputs to validate on the fly
-    var inputs = document.querySelectorAll("input, textarea, select")
+    var inputs = form.querySelectorAll("input, textarea, select")
     for (var i = 0; i < inputs.length; ++i) {
       inputs.item(i).addEventListener("change", function(ev) {
         var errors = validate(form, constraints) || {};
@@ -108,7 +111,9 @@ document.addEventListener("DOMContentLoaded",function() {
       showErrors(form, errors || {});
       if (!errors) {
         showSuccess();
+        return 1;
       }
+      return 0;
     }
 
     // Updates the inputs with the validation errors

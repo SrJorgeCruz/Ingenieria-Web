@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded",function() {
             message:"Obligatorio"
         },
         format:{
-          pattern:"(ISSN|eISSN) [0-9]{4}-[0-9]{3}[0-9Xx]",
+          pattern:"[0-9]{4}-[0-9]{3}[0-9Xx]",
           message:"tiene que ser válido"
         }
     },
@@ -100,14 +100,16 @@ document.addEventListener("DOMContentLoaded",function() {
     };
 
     // Hook up the form so we can prevent it from being posted
-    var form = document.querySelector("form#lf");
-    var button = document.getElementById("boton2");
-    button.addEventListener("click", function(ev) {
-      handleFormSubmit(form);
+    var form = document.getElementById("lf");
+    form.addEventListener("submit", function(ev) {
+      let bandera=handleFormSubmit(form);
+      if(bandera != 1){
+        ev.preventDefault();
+      }
     });
 
     // Hook up the inputs to validate on the fly
-    var inputs = document.querySelectorAll("input, textarea, select")
+    var inputs = form.querySelectorAll("input, textarea, select")
     for (var i = 0; i < inputs.length; ++i) {
       inputs.item(i).addEventListener("change", function(ev) {
         var errors = validate(form, constraints) || {};
@@ -122,7 +124,9 @@ document.addEventListener("DOMContentLoaded",function() {
       showErrors(form, errors || {});
       if (!errors) {
         showSuccess();
+        return 1;
       }
+      return 0;
     }
 
     // Updates the inputs with the validation errors
@@ -191,6 +195,10 @@ document.addEventListener("DOMContentLoaded",function() {
 
     function showSuccess() {
       // We made it \:D/
+
+      
+      
+
       alert("Success!");
     }
   });
