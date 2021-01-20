@@ -27,12 +27,14 @@ router.get('/nuevosProductos',(req, res)=>{
     res.render('index0');
 });
 
+// Se usa en el coordinador para traer productividad
 router.get('/src/Estudiantes/Productividad/:curp',(req, res)=>{
   const usuarioJSONr = fs.readFileSync('src/Estudiantes/Productividad/'+req.params.curp,'utf-8');
   const usuario = JSON.parse(usuarioJSONr);  
   res.json(usuario)
 });
 
+//Traer datos de producto y cambio de pagina para las actualizaciones/modificaciones
 router.get('/index1/:titulo',(req, res)=>{
   let tit = req.params.titulo;
   let indice=0;
@@ -475,9 +477,6 @@ router.post('/modificarhardwareSoftware',(req, res) =>{
 
   res.redirect('/paginaAlumno');
 });
-
-
-
 
 module.exports = router;
 
